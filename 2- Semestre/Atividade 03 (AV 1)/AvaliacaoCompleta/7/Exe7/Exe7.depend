@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1615668635 source:c:\users\nasser\documents\analise e desenvolvimento de sistemas\programação estruturada\atividade 03 (av 1)\avaliacaocompleta\7\exe7\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+
