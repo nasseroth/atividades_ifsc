@@ -52,17 +52,13 @@ void cadastraVenda(double vendas[5][5][4]){
     printf("Informe o Vendendor (1 à 4):");
     scanf("%d", &vendedor);
     vendedor = vendedor - 1;
-
-    printf("Informe o Produto (1 à 5):");
-    scanf("%d", &produto);
-    produto = produto - 1;
-
+	
     printf("Informe o dia da Venda (1 à 5):");
     scanf("%d", &dia);
     dia = dia - 1;
 
     printf("Valor da Venda:");
-    scanf("%lf", &valor);
+    scanf("%lf", &registroVendas);
 
     vendas[dia][produto][vendedor] = valor;
 }
