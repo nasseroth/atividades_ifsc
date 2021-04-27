@@ -23,7 +23,7 @@
 
 1619474416 c:\users\thiaguinho mendes\desktop\faculdade\2° semestre\programação estruturada\atividade 3\futebol\menu.h
 
-1619475682 source:c:\users\nasser\documents\github\atividades_c\2- semestre\atividade final\futebol\main.c
+1619477569 source:c:\users\nasser\documents\github\atividades_c\2- semestre\atividade final\futebol\main.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -33,7 +33,7 @@
 	<windows.h>
 	"equipe.h"
 	"jogadores.h"
-	"partidas.h"
+	"partidas2.h"
 	"resultados.h"
 	"menu.h"
 
@@ -41,9 +41,11 @@
 
 1619475986 c:\users\nasser\documents\github\atividades_c\2- semestre\atividade final\futebol\jogadores.h
 
-1619476308 c:\users\nasser\documents\github\atividades_c\2- semestre\atividade final\futebol\partidas.h
+1619477382 c:\users\nasser\documents\github\atividades_c\2- semestre\atividade final\futebol\partidas.h
 
 1619401996 c:\users\nasser\documents\github\atividades_c\2- semestre\atividade final\futebol\resultados.h
 
 1619474418 c:\users\nasser\documents\github\atividades_c\2- semestre\atividade final\futebol\menu.h
+
+1619477640 c:\users\nasser\documents\github\atividades_c\2- semestre\atividade final\futebol\partidas2.h
 

@@ -189,7 +189,7 @@ void listarPartidas(Partidas lista[50])
             for(a = 0; a < 50; a++){
                 if(lista[contador].jogador[a].nome != NULL && lista[contador].jogador[a].qtdGols != 0){
                     printf("%s <<\n ", lista[contador].jogador[a].nome[a]);
-                    printf("O jogador %s fez %d GOL(s)\n", lista[contador].jogador[a], lista[contador].jogador[a].qtdGols);
+                    printf("O jogador %s fez %d GOL(s)\n", lista[contador].jogador[a].nome, lista[contador].jogador[a].qtdGols);
                 }
             }
 
