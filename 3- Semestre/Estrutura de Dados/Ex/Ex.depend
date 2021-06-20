@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1621296767 source:c:\users\nasser\documents\analise e desenvolvimento de sistemas\3º semestre\estrutura de dados\ex\main.c
+	<stdio.h>
+	<stdlib.h>
+
