@@ -13,6 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
+});*/
+
+/*
+Route::get('/', function() {
+    return view('home');
+});*/
+
+Route::view('/', 'home');
+
+Route::view('/produtos', 'produtos');
+
+Route::get('/produtos/{nomeProduto}/comentario/{id}', function($nomeProduto, $id) {
+    echo "Este é o comentário: ".$id.", do produto: ".$nomeProduto;
 });
+//http://127.0.0.1:8000/produtos/mesa/5
