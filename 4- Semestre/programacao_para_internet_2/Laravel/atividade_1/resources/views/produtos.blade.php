@@ -1,12 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos</title>
-</head>
-<body>
-    <h1>Lista de Produtos</h1>
-</body>
-</html>
+
+<h1>Lista de Produtos</h1>
+
+<hr>
+
+<form method="post">
+    @csrf
+
+    <b>Produto:</b>
+    <input type="text" name="produto" id=""><br><br>
+
+    <b>Preço:</b>
+    <input type="text" name="preco" id=""><br><br>
+
+    <b>Categoria:</b>
+    <input type="text" name="categoria" id=""><br><br>
+
+    <input type="submit" value="Salvar">
+</form>
+
+<hr>
+
+<label>
+    Produto: {{ $produto }}
+</label>
+
+<label>
+    Preço: {{ $preco }}
+</label>
+
+<label>
+    Categoria: {{ $categoria }}
+</label>

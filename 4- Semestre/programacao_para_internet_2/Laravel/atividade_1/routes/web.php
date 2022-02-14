@@ -1,33 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProdutosController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
-/*
-Route::get('/', function () {
-    return view('welcome');
-});*/
+// Route::view('/', 'HomeController@index');
 
-/*
-Route::get('/', function() {
-    return view('home');
-});*/
+Route::get('/', [HomeController::class, 'index']);
 
-Route::view('/', 'home');
-
-Route::view('/produtos', 'produtos');
-
-Route::get('/produtos/{nomeProduto}/comentario/{id}', function($nomeProduto, $id) {
-    echo "Este é o comentário: ".$id.", do produto: ".$nomeProduto;
-});
-//http://127.0.0.1:8000/produtos/mesa/5
+Route::get('/produtos', [ProdutosController::class, 'index']);
+Route::post('/produtos', [ProdutosController::class, 'index']);
+Route::get('/produtos/excluir/{id}', [ProdutosController::class, 'excluir']);

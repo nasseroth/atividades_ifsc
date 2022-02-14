@@ -8,5 +8,9 @@
 </head>
 <body>
     <h1>Bem vindo a Página Inicial</h1>
+
+    <p><b>Meu nome é:</b> {{ $usuario }}</p>
+    <p><b>Meu perfil é:</b> {{ $perfil }}</p>
+    <p><b>Minha empresa é:</b> {{ $empresa }}</p>
 </body>
 </html>
