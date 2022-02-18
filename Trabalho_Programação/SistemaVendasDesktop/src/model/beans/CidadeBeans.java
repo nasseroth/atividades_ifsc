@@ -6,33 +6,33 @@ package model.beans;
  */
 public class CidadeBeans {
 
-    private int idCliente;
-    private String descricaoCidade;
+    private int idCidade;
+    private String nomeCidade;
     private String ufCidade;
 
     public CidadeBeans() {
     }
 
-    public CidadeBeans(int idCliente, String descricaoCidade, String ufCidade) {
-        this.idCliente = idCliente;
-        this.descricaoCidade = descricaoCidade;
+    public CidadeBeans(int idCidade, String nomeCidade, String ufCidade) {
+        this.idCidade = idCidade;
+        this.nomeCidade = nomeCidade;
         this.ufCidade = ufCidade;
     }
 
-    public int getIdCliente() {
-        return idCliente;
+    public int getIdCidade() {
+        return idCidade;
     }
 
-    public void setIdCliente(int idCliente) {
-        this.idCliente = idCliente;
+    public void setIdCidade(int idCidade) {
+        this.idCidade = idCidade;
     }
 
-    public String getDescricaoCidade() {
-        return descricaoCidade;
+    public String getNomeCidade() {
+        return nomeCidade;
     }
 
-    public void setDescricaoCidade(String descricaoCidade) {
-        this.descricaoCidade = descricaoCidade;
+    public void setNomeCidade(String nomeCidade) {
+        this.nomeCidade = nomeCidade;
     }
 
     public String getUfCidade() {
@@ -42,5 +42,4 @@ public class CidadeBeans {
     public void setUfCidade(String ufCidade) {
         this.ufCidade = ufCidade;
     }
-
 }

@@ -3,6 +3,7 @@ package model.dao;
 import connection.SingleConnection;
 import java.util.List;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -26,18 +27,27 @@ public class DaoCliente {
     //Metodo para salvar os dados na base de dados 
     public void salvarCliente(ClienteBeans beans) {
         try {
-            String sql = "insert into cliente(codCliente, biCliente, nomeCliente,"
-                    + " enderecoCliente, estadoCliente) values(?,?,?,?,?)";
+            String sql = "insert into cliente(nomeCliente, dtNasCliente, cpfCliente,"
+                    + " rgCliente, foneCliente, fone2Cliente, emailCliente,"
+                    + "compleEnderecoCliente, idCep) values (?,?,?,?,?,?,?,?,?)";
             PreparedStatement pst = connection.prepareStatement(sql);
-            pst.setString(1, beans.getCodCliente());
-            pst.setString(2, beans.getBiCliente());
-            pst.setString(3, beans.getNomeCliente());
-            pst.setString(4, beans.getEnderecoCliente());
-            pst.setString(5, beans.getEstadoCliente());
+            
+            pst.setString(1, beans.getNomeCliente());
+            java.sql.Date d = new java.sql.Date (beans.getDtNasCliente().getTime());
+            pst.setDate(2, d);
+            pst.setString(3, beans.getCpfCliente());
+            pst.setString(4, beans.getRgCliente());
+            pst.setString(5, beans.getFoneCliente());
+            pst.setString(6, beans.getFone2Cliente());
+            pst.setString(7, beans.getEmailCliente());
+            pst.setString(8, beans.getCompleEnderecoCliente());
+            pst.setInt(9, beans.getIdCep());
+            
             pst.execute();
             connection.commit();
             JOptionPane.showMessageDialog(null, "Cliente Salvo com Sucesso");
         } catch (SQLException ex) {
+            System.out.println(ex);
             JOptionPane.showMessageDialog(null, "Oops!\nErro ao salvar cliente");
         }
     }
@@ -52,14 +62,20 @@ public class DaoCliente {
             while (rs.next()) {
                 ClienteBeans beans = new ClienteBeans();
                 beans.setIdCliente(rs.getInt("idCliente"));
-                beans.setCodCliente(rs.getString("codCliente"));
-                beans.setBiCliente(rs.getString("biCliente"));
                 beans.setNomeCliente(rs.getString("nomeCliente"));
-                beans.setEnderecoCliente(rs.getString("enderecoCliente"));
-                beans.setEstadoCliente(rs.getString("estadoCliente"));
+                beans.setDtNasCliente(rs.getDate("dtNasCliente"));
+                beans.setCpfCliente(rs.getString("cpfCliente"));
+                beans.setRgCliente(rs.getString("rgCliente"));
+                beans.setFoneCliente(rs.getString("foneCliente"));
+                beans.setFone2Cliente(rs.getString("fone2Cliente"));
+                beans.setEmailCliente(rs.getString("emailCliente"));
+                beans.setCompleEnderecoCliente(rs.getString("compleEnderecoCliente"));
+                beans.setIdCep(rs.getInt("idCep"));
+                
                 lista.add(beans);
             }
         } catch (SQLException ex) {
+            System.out.println(ex);
             JOptionPane.showMessageDialog(null, "Oops!\nErro ao listar cliente");
         }
         return lista;
@@ -68,14 +84,21 @@ public class DaoCliente {
     //Metodo para a actualizacao de dados
     public void actualizarCliente(ClienteBeans beans) {
         try {
-            String sql = "update cliente set codCliente = ?, biCliente = ?, nomeCliente = ?,"
-                    + "enderecoCliente = ?, estadoCliente = ? where idCliente = ?";
+            String sql = "update cliente set nomeCliente = ?, dtNasCliente = ?, cpfCliente = ?,"
+                    + "rgCliente = ?, foneCliente = ?, fone2Cliente = ?, emailCliente = ?, compleEnderecoCliente = ?,"
+                    + "idCep = ? where idCliente = ?";
             PreparedStatement ps = connection.prepareStatement(sql);
-            ps.setString(1, beans.getCodCliente());
-            ps.setString(2, beans.getBiCliente());
-            ps.setString(3, beans.getNomeCliente());
-            ps.setString(4, beans.getEnderecoCliente());
-            ps.setString(5, beans.getEstadoCliente());
+            ps.setString(1, beans.getNomeCliente());
+            ps.setDate(2, (Date) beans.getDtNasCliente());
+            ps.setString(3, beans.getCpfCliente());
+            ps.setString(4, beans.getRgCliente());
+            ps.setString(5, beans.getFoneCliente());
+            ps.setString(6, beans.getFone2Cliente());
+            ps.setString(7, beans.getEmailCliente());
+            ps.setString(8, beans.getCompleEnderecoCliente());
+            ps.setInt(9, beans.getIdCep());
+            
+
             ps.setInt(6, beans.getIdCliente());
             ps.execute();
             connection.commit();
@@ -134,21 +157,26 @@ public class DaoCliente {
     
     public ClienteBeans consultaCliente(String cod){
         try {
-            String sql = "select *from cliente where codCliente ='"+cod+"'";
+            String sql = "select *from cliente where idCliente ='"+cod+"'";
             PreparedStatement ps = connection.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             if (rs.next()){
                 ClienteBeans beans = new ClienteBeans();
                 beans.setIdCliente(rs.getInt("idCliente"));
-                beans.setCodCliente(rs.getString("codCliente"));
-                beans.setBiCliente(rs.getString("biCliente"));
                 beans.setNomeCliente(rs.getString("nomeCliente"));
-                beans.setEnderecoCliente(rs.getString("enderecoCliente"));
-                beans.setEstadoCliente(rs.getString("estadoCliente"));
+                beans.setDtNasCliente(rs.getDate("dtNasCliente"));
+                beans.setCpfCliente(rs.getString("cpfCliente"));
+                beans.setRgCliente(rs.getString("rgCliente"));
+                beans.setFoneCliente(rs.getString("foneCliente"));
+                beans.setFone2Cliente(rs.getString("fone2Cliente"));
+                beans.setEmailCliente(rs.getString("emailCliente"));
+                beans.setCompleEnderecoCliente(rs.getString("compleEnderecoCliente"));
+                beans.setIdCep(rs.getInt("idCep"));
                 idCliente = rs.getInt("idCliente");
                 return beans;
             }
         } catch (SQLException ex) {
+            System.out.println(ex);
             JOptionPane.showMessageDialog(null, "Erro ao Buscar Cliente");
         }
         return null;

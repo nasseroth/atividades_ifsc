@@ -394,7 +394,7 @@ public class VendasForm extends javax.swing.JInternalFrame {
 
         jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 30)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("Super Mercado BBM29");
+        jLabel1.setText("Super Mercado Líder");
 
         jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
@@ -859,7 +859,7 @@ public class VendasForm extends javax.swing.JInternalFrame {
                 jTextFieldCodProd.setText("");
                 jTextFieldCodProd.requestFocus();
                 if (res == JOptionPane.YES_OPTION) {
-                    ProdutooForm form = new ProdutooForm();
+                    ProdutoForm form = new ProdutoForm();
                     MainForm.jDesktopPane.add(form);
                     form.setVisible(true);
                 }

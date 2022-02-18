@@ -115,7 +115,7 @@ where idVenda = 20;]]>
 				<textElement>
 					<font size="18" isBold="true"/>
 				</textElement>
-				<text><![CDATA[Super Mercado BBM29]]></text>
+				<text><![CDATA[Super Mercado LÍDER]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="193" y="25" width="165" height="20" uuid="78e3dfd9-29ef-46fc-aced-05ce09da14d8"/>

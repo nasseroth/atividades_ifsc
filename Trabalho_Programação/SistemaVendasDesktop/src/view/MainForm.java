@@ -54,6 +54,9 @@ public class MainForm extends javax.swing.JFrame {
         jMenuItemVendedor = new javax.swing.JMenuItem();
         jMenuItemCliente = new javax.swing.JMenuItem();
         jMenuItemProduto = new javax.swing.JMenuItem();
+        jMenuItemBairro = new javax.swing.JMenuItem();
+        jMenuItemCidade = new javax.swing.JMenuItem();
+        jMenuItemEndereco = new javax.swing.JMenuItem();
         jMenuRelatorio = new javax.swing.JMenu();
         jMenuItemRel = new javax.swing.JMenuItem();
         jMenuAjuda = new javax.swing.JMenu();
@@ -81,7 +84,7 @@ public class MainForm extends javax.swing.JFrame {
         jMenuVendas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/vendas02.png"))); // NOI18N
         jMenuVendas.setText("Vendas");
 
-        jMenuItemVendass.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItemVendass.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItemVendass.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/sales.png"))); // NOI18N
         jMenuItemVendass.setText("Realizar Venda");
         jMenuItemVendass.addActionListener(new java.awt.event.ActionListener() {
@@ -94,9 +97,9 @@ public class MainForm extends javax.swing.JFrame {
         jMenuBar1.add(jMenuVendas);
 
         jMenuRegistos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/register.png"))); // NOI18N
-        jMenuRegistos.setText("Registos");
+        jMenuRegistos.setText("Cadastros");
 
-        jMenuItemVendedor.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItemVendedor.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItemVendedor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/salesman.png"))); // NOI18N
         jMenuItemVendedor.setText("Vendedor");
         jMenuItemVendedor.addActionListener(new java.awt.event.ActionListener() {
@@ -106,7 +109,7 @@ public class MainForm extends javax.swing.JFrame {
         });
         jMenuRegistos.add(jMenuItemVendedor);
 
-        jMenuItemCliente.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItemCliente.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItemCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/customer.png"))); // NOI18N
         jMenuItemCliente.setText("Cliente");
         jMenuItemCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -116,7 +119,7 @@ public class MainForm extends javax.swing.JFrame {
         });
         jMenuRegistos.add(jMenuItemCliente);
 
-        jMenuItemProduto.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItemProduto.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItemProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/product.png"))); // NOI18N
         jMenuItemProduto.setText("Produto");
         jMenuItemProduto.addActionListener(new java.awt.event.ActionListener() {
@@ -126,12 +129,42 @@ public class MainForm extends javax.swing.JFrame {
         });
         jMenuRegistos.add(jMenuItemProduto);
 
+        jMenuItemBairro.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItemBairro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bairro.png"))); // NOI18N
+        jMenuItemBairro.setText("Bairro");
+        jMenuItemBairro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemBairroActionPerformed(evt);
+            }
+        });
+        jMenuRegistos.add(jMenuItemBairro);
+
+        jMenuItemCidade.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItemCidade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cidade.png"))); // NOI18N
+        jMenuItemCidade.setText("Cidade");
+        jMenuItemCidade.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemCidadeActionPerformed(evt);
+            }
+        });
+        jMenuRegistos.add(jMenuItemCidade);
+
+        jMenuItemEndereco.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItemEndereco.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bairro.png"))); // NOI18N
+        jMenuItemEndereco.setText("Endereço");
+        jMenuItemEndereco.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemEnderecoActionPerformed(evt);
+            }
+        });
+        jMenuRegistos.add(jMenuItemEndereco);
+
         jMenuBar1.add(jMenuRegistos);
 
         jMenuRelatorio.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/analytics.png"))); // NOI18N
         jMenuRelatorio.setText("Relatórios");
 
-        jMenuItemRel.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItemRel.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItemRel.setText("Gerar Relatório");
         jMenuItemRel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -145,7 +178,7 @@ public class MainForm extends javax.swing.JFrame {
         jMenuAjuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/question.png"))); // NOI18N
         jMenuAjuda.setText("Ajuda");
 
-        jMenuItemSobre.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItemSobre.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_U, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItemSobre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/about.png"))); // NOI18N
         jMenuItemSobre.setText("Sobre");
         jMenuItemSobre.addActionListener(new java.awt.event.ActionListener() {
@@ -160,7 +193,7 @@ public class MainForm extends javax.swing.JFrame {
         jMenuOpcoes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/technical-support.png"))); // NOI18N
         jMenuOpcoes.setText("Opcoes");
 
-        jMenuItemOutra.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.CTRL_MASK));
+        jMenuItemOutra.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItemOutra.setText("Usar outra Conta");
         jMenuItemOutra.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -169,7 +202,7 @@ public class MainForm extends javax.swing.JFrame {
         });
         jMenuOpcoes.add(jMenuItemOutra);
 
-        jMenuItemSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, java.awt.event.InputEvent.ALT_MASK));
+        jMenuItemSair.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, java.awt.event.InputEvent.ALT_DOWN_MASK));
         jMenuItemSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logout.png"))); // NOI18N
         jMenuItemSair.setText("Sair");
         jMenuItemSair.addActionListener(new java.awt.event.ActionListener() {
@@ -218,7 +251,7 @@ public class MainForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemClienteActionPerformed
 
     private void jMenuItemProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemProdutoActionPerformed
-        ProdutooForm form = new ProdutooForm();
+        ProdutoForm form = new ProdutoForm();
         centralizarForm(form);
     }//GEN-LAST:event_jMenuItemProdutoActionPerformed
 
@@ -236,6 +269,21 @@ public class MainForm extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_jMenuItemSairActionPerformed
 
+    private void jMenuItemBairroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemBairroActionPerformed
+        BairroForm form = new BairroForm();
+        centralizarForm(form);
+    }//GEN-LAST:event_jMenuItemBairroActionPerformed
+
+    private void jMenuItemCidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCidadeActionPerformed
+        CidadeForm form = new CidadeForm();
+        centralizarForm(form);
+    }//GEN-LAST:event_jMenuItemCidadeActionPerformed
+
+    private void jMenuItemEnderecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEnderecoActionPerformed
+        EnderecoForm form = new EnderecoForm();
+        centralizarForm(form);
+    }//GEN-LAST:event_jMenuItemEnderecoActionPerformed
+
     void centralizarForm(JInternalFrame frame) {
         jDesktopPane.add(frame);
         Dimension dimension = jDesktopPane.getSize();
@@ -250,7 +298,10 @@ public class MainForm extends javax.swing.JFrame {
     public static javax.swing.JDesktopPane jDesktopPane;
     private javax.swing.JMenu jMenuAjuda;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItemBairro;
+    private javax.swing.JMenuItem jMenuItemCidade;
     private javax.swing.JMenuItem jMenuItemCliente;
+    private javax.swing.JMenuItem jMenuItemEndereco;
     private javax.swing.JMenuItem jMenuItemOutra;
     private javax.swing.JMenuItem jMenuItemProduto;
     private javax.swing.JMenuItem jMenuItemRel;

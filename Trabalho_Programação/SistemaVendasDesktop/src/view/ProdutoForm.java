@@ -11,14 +11,14 @@ import model.dao.DaoProduto;
  *
  * @author Nasser-Othman
  */
-public class ProdutooForm extends javax.swing.JInternalFrame {
+public class ProdutoForm extends javax.swing.JInternalFrame {
 
     DaoProduto produto = new DaoProduto();
     ProdutoBeans beans = new ProdutoBeans();
     DefaultTableModel model = new DefaultTableModel();
     int flag = 0;
 
-    public ProdutooForm() {
+    public ProdutoForm() {
         initComponents();
         listar();
     }

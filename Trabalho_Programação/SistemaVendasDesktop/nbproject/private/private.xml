@@ -3,8 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Nasser/Documents/GitHub/atividades_ifsc/Trabalho_Programação/SistemaVendasDesktop/src/model/beans/CidadeBeans.java</file>
-            <file>file:/C:/Users/Nasser/Documents/GitHub/atividades_ifsc/Trabalho_Programação/SistemaVendasDesktop/src/model/beans/VendedorBeans.java</file>
+            <file>file:/C:/Users/Nasser/Documents/GitHub/atividades_ifsc/Trabalho_Programação/SistemaVendasDesktop/src/view/ClienteForm.java</file>
+            <file>file:/C:/Users/Nasser/Documents/GitHub/atividades_ifsc/Trabalho_Programação/SistemaVendasDesktop/src/model/dao/DaoCliente.java</file>
+            <file>file:/C:/Users/Nasser/Documents/GitHub/atividades_ifsc/Trabalho_Programação/SistemaVendasDesktop/src/model/beans/EnderecoBeans.java</file>
         </group>
     </open-files>
 </project-private>

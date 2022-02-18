@@ -77,14 +77,12 @@ public class LoginForm extends javax.swing.JFrame {
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Usuario:");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(10, 140, 80, 30);
 
         jTextFieldUsuario.setBackground(new java.awt.Color(240, 240, 245));
         jTextFieldUsuario.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jTextFieldUsuario.setForeground(new java.awt.Color(0, 0, 0));
         jTextFieldUsuario.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 51, 51), 1, true));
         jTextFieldUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,14 +94,12 @@ public class LoginForm extends javax.swing.JFrame {
 
         jLabel3.setBackground(new java.awt.Color(255, 255, 255));
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("PassWord:");
+        jLabel3.setText("Senha:");
         jPanel1.add(jLabel3);
         jLabel3.setBounds(10, 190, 80, 19);
 
         jPasswordField.setBackground(new java.awt.Color(240, 240, 245));
         jPasswordField.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
-        jPasswordField.setForeground(new java.awt.Color(0, 0, 0));
         jPasswordField.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 51, 51), 1, true));
         jPasswordField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,7 +130,7 @@ public class LoginForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButtonSair);
-        jButtonSair.setBounds(10, 290, 350, 35);
+        jButtonSair.setBounds(10, 290, 350, 27);
 
         jButtonEntrar.setBackground(new java.awt.Color(0, 102, 153));
         jButtonEntrar.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
@@ -157,7 +153,7 @@ public class LoginForm extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButtonEntrar);
-        jButtonEntrar.setBounds(10, 240, 350, 35);
+        jButtonEntrar.setBounds(10, 240, 350, 27);
 
         jPanel2.setBackground(new java.awt.Color(0, 102, 153));
 

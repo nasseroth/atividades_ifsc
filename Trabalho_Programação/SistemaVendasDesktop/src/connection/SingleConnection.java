@@ -19,11 +19,14 @@ public class SingleConnection {
 
     public static Connection getConnection() {
         try {
-            return DriverManager.getConnection(banco + "?verifyServerCertificate=false"
+            Connection conexao = DriverManager.getConnection(banco + "?verifyServerCertificate=false"
                     + "&useSSL=false"
                     + "&requireSSL=false"
                     + "&USER=" + user + "&password=" + senha
-                    + "&serverTimezone=UTC");
+                    + "&serverTimezone=UTC"
+                    + "&autoReconnect=true");
+            conexao.setAutoCommit(false);
+            return conexao;
         } catch (Exception ex) {
             ex.printStackTrace();
             return null;

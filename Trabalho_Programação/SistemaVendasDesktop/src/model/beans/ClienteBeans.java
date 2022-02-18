@@ -1,5 +1,8 @@
 package model.beans;
 
+import java.util.Date;
+
+
 /**
  *
  * @author Nasser-Othman
@@ -8,21 +11,29 @@ public class ClienteBeans {
 
     private int idCliente;
     private String nomeCliente;
-    private String biCliente;
-    private String enderecoCliente;
-    private String codCliente;
-    private String estadoCliente;
+    private Date dtNasCliente;
+    private String cpfCliente;
+    private String rgCliente;
+    private String foneCliente;
+    private String fone2Cliente;
+    private String emailCliente;
+    private String compleEnderecoCliente;
+    private int idCep;
 
     public ClienteBeans() {
     }
 
-    public ClienteBeans(int idCliente, String nomeCliente, String biCliente, String enderecoCliente, String codCliente, String estadoCliente) {
+    public ClienteBeans(int idCliente, String nomeCliente, Date dtNasCliente, String cpfCliente, String rgCliente, String foneCliente, String fone2Cliente, String emailCliente, String compleEnderecoCliente, int idCep) {
         this.idCliente = idCliente;
         this.nomeCliente = nomeCliente;
-        this.biCliente = biCliente;
-        this.enderecoCliente = enderecoCliente;
-        this.codCliente = codCliente;
-        this.estadoCliente = estadoCliente;
+        this.dtNasCliente = dtNasCliente;
+        this.cpfCliente = cpfCliente;
+        this.rgCliente = rgCliente;
+        this.foneCliente = foneCliente;
+        this.fone2Cliente = fone2Cliente;
+        this.emailCliente = emailCliente;
+        this.compleEnderecoCliente = compleEnderecoCliente;
+        this.idCep = idCep;
     }
 
     public int getIdCliente() {
@@ -41,36 +52,68 @@ public class ClienteBeans {
         this.nomeCliente = nomeCliente;
     }
 
-    public String getBiCliente() {
-        return biCliente;
+    public Date getDtNasCliente() {
+        return dtNasCliente;
     }
 
-    public void setBiCliente(String biCliente) {
-        this.biCliente = biCliente;
+    public void setDtNasCliente(Date dtNasCliente) {
+        this.dtNasCliente = dtNasCliente;
     }
 
-    public String getEnderecoCliente() {
-        return enderecoCliente;
+    public String getCpfCliente() {
+        return cpfCliente;
     }
 
-    public void setEnderecoCliente(String enderecoCliente) {
-        this.enderecoCliente = enderecoCliente;
+    public void setCpfCliente(String cpfCliente) {
+        this.cpfCliente = cpfCliente;
     }
 
-    public String getCodCliente() {
-        return codCliente;
+    public String getRgCliente() {
+        return rgCliente;
     }
 
-    public void setCodCliente(String codCliente) {
-        this.codCliente = codCliente;
+    public void setRgCliente(String rgCliente) {
+        this.rgCliente = rgCliente;
     }
 
-    public String getEstadoCliente() {
-        return estadoCliente;
+    public String getFoneCliente() {
+        return foneCliente;
     }
 
-    public void setEstadoCliente(String estadoCliente) {
-        this.estadoCliente = estadoCliente;
+    public void setFoneCliente(String foneCliente) {
+        this.foneCliente = foneCliente;
+    }
+
+    public String getFone2Cliente() {
+        return fone2Cliente;
+    }
+
+    public void setFone2Cliente(String fone2Cliente) {
+        this.fone2Cliente = fone2Cliente;
+    }
+
+    public String getEmailCliente() {
+        return emailCliente;
+    }
+
+    public void setEmailCliente(String emailCliente) {
+        this.emailCliente = emailCliente;
+    }
+
+    public String getCompleEnderecoCliente() {
+        return compleEnderecoCliente;
+    }
+
+    public void setCompleEnderecoCliente(String compleEnderecoCliente) {
+        this.compleEnderecoCliente = compleEnderecoCliente;
+    }
+
+    public int getIdCep() {
+        return idCep;
+    }
+
+    public void setIdCep(int idCep) {
+        this.idCep = idCep;
     }
 
 }

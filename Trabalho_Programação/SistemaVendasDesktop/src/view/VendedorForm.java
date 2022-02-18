@@ -51,7 +51,6 @@ public class VendedorForm extends javax.swing.JInternalFrame {
 
     private void refreshForm() {
         jTextFieldNome.setEnabled(!true);
-        jTextFieldBI.setEnabled(!true);
         jTextFieldMobile.setEnabled(!true);
         jTextFieldUserName.setEnabled(!true);
         jPasswordFieldPass.setEnabled(!true);
@@ -63,7 +62,6 @@ public class VendedorForm extends javax.swing.JInternalFrame {
         jButtonCancelar.setEnabled(!true);
         jComboBoxEstado.setSelectedItem("Selecione");
         jTextFieldID.setText("");
-        jTextFieldBI.setText("");
         jTextFieldMobile.setText("");
         jTextFieldNome.setText("");
         jTextFieldUserName.setText("");
@@ -80,8 +78,6 @@ public class VendedorForm extends javax.swing.JInternalFrame {
         jTextFieldID = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jTextFieldNome = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jTextFieldBI = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jTextFieldMobile = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
@@ -109,64 +105,43 @@ public class VendedorForm extends javax.swing.JInternalFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("ID:");
 
-        jTextFieldID.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldID.setFont(new java.awt.Font("Century Gothic", 3, 14)); // NOI18N
         jTextFieldID.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jTextFieldID.setEnabled(false);
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Nome:");
 
-        jTextFieldNome.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldNome.setFont(new java.awt.Font("Century Gothic", 3, 16)); // NOI18N
         jTextFieldNome.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jTextFieldNome.setEnabled(false);
 
-        jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("BI:");
-
-        jTextFieldBI.setBackground(new java.awt.Color(255, 255, 255));
-        jTextFieldBI.setFont(new java.awt.Font("Century Gothic", 3, 14)); // NOI18N
-        jTextFieldBI.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
-        jTextFieldBI.setEnabled(false);
-
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Telefone:");
 
-        jTextFieldMobile.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldMobile.setFont(new java.awt.Font("Century Gothic", 3, 14)); // NOI18N
         jTextFieldMobile.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jTextFieldMobile.setEnabled(false);
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Nome de Usuario:");
 
-        jTextFieldUserName.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldUserName.setFont(new java.awt.Font("Century Gothic", 3, 14)); // NOI18N
         jTextFieldUserName.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jTextFieldUserName.setEnabled(false);
 
         jLabel6.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Senha:");
 
-        jPasswordFieldPass.setBackground(new java.awt.Color(255, 255, 255));
         jPasswordFieldPass.setFont(new java.awt.Font("Century Gothic", 3, 14)); // NOI18N
         jPasswordFieldPass.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jPasswordFieldPass.setEnabled(false);
 
         jLabel7.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Estado:");
 
-        jComboBoxEstado.setBackground(new java.awt.Color(255, 255, 255));
         jComboBoxEstado.setFont(new java.awt.Font("Century Gothic", 3, 14)); // NOI18N
         jComboBoxEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione", "1", "0" }));
         jComboBoxEstado.setToolTipText("1 - Activo, 0 - Inactivo");
@@ -175,7 +150,6 @@ public class VendedorForm extends javax.swing.JInternalFrame {
 
         jButtonEditar.setBackground(new java.awt.Color(153, 255, 153));
         jButtonEditar.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jButtonEditar.setForeground(new java.awt.Color(0, 0, 0));
         jButtonEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/edit.png"))); // NOI18N
         jButtonEditar.setText("Editar");
         jButtonEditar.setBorderPainted(false);
@@ -198,7 +172,6 @@ public class VendedorForm extends javax.swing.JInternalFrame {
 
         jButtonSalvar.setBackground(new java.awt.Color(0, 153, 153));
         jButtonSalvar.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jButtonSalvar.setForeground(new java.awt.Color(0, 0, 0));
         jButtonSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/floppy.png"))); // NOI18N
         jButtonSalvar.setText("Salvar");
         jButtonSalvar.setBorderPainted(false);
@@ -221,7 +194,6 @@ public class VendedorForm extends javax.swing.JInternalFrame {
 
         jButtonNovo.setBackground(new java.awt.Color(0, 102, 153));
         jButtonNovo.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jButtonNovo.setForeground(new java.awt.Color(0, 0, 0));
         jButtonNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/add-button1.png"))); // NOI18N
         jButtonNovo.setText("Novo");
         jButtonNovo.setBorderPainted(false);
@@ -243,7 +215,6 @@ public class VendedorForm extends javax.swing.JInternalFrame {
 
         jButtonCancelar.setBackground(new java.awt.Color(255, 51, 51));
         jButtonCancelar.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jButtonCancelar.setForeground(new java.awt.Color(0, 0, 0));
         jButtonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cancel.png"))); // NOI18N
         jButtonCancelar.setText("Cancelar");
         jButtonCancelar.setBorderPainted(false);
@@ -266,7 +237,6 @@ public class VendedorForm extends javax.swing.JInternalFrame {
 
         jButtonEliminar.setBackground(new java.awt.Color(241, 116, 33));
         jButtonEliminar.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jButtonEliminar.setForeground(new java.awt.Color(0, 0, 0));
         jButtonEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/delete.png"))); // NOI18N
         jButtonEliminar.setText("Eliminar");
         jButtonEliminar.setBorderPainted(false);
@@ -321,11 +291,7 @@ public class VendedorForm extends javax.swing.JInternalFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextFieldBI))
+                        .addComponent(jTextFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, 432, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                         .addComponent(jButtonNovo, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -348,9 +314,7 @@ public class VendedorForm extends javax.swing.JInternalFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jTextFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextFieldBI, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextFieldNome, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
@@ -444,7 +408,7 @@ public class VendedorForm extends javax.swing.JInternalFrame {
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(20, Short.MAX_VALUE))
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -464,7 +428,6 @@ public class VendedorForm extends javax.swing.JInternalFrame {
     private void jButtonNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNovoActionPerformed
         flag = 1;
         jTextFieldNome.setEnabled(true);
-        jTextFieldBI.setEnabled(true);
         jTextFieldMobile.setEnabled(true);
         jTextFieldUserName.setEnabled(true);
         jPasswordFieldPass.setEnabled(true);
@@ -475,7 +438,6 @@ public class VendedorForm extends javax.swing.JInternalFrame {
         jButtonEliminar.setEnabled(!true);
         jButtonCancelar.setEnabled(true);
         jTextFieldID.setText("");
-        jTextFieldBI.setText("");
         jTextFieldMobile.setText("");
         jTextFieldNome.setText("");
         jTextFieldUserName.setText("");
@@ -486,9 +448,6 @@ public class VendedorForm extends javax.swing.JInternalFrame {
         if (jTextFieldNome.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Preencha o Campo Nome!");
             jTextFieldNome.requestFocus();
-        } else if (jTextFieldBI.getText().isEmpty()) {
-            JOptionPane.showMessageDialog(null, "Preencha o campo BI!");
-            jTextFieldBI.requestFocus();
         } else if (jTextFieldUserName.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Preencha o campo Nome De Usuario!");
             jTextFieldUserName.requestFocus();
@@ -511,7 +470,6 @@ public class VendedorForm extends javax.swing.JInternalFrame {
             } else if (vendedor.validaNomeUsuario(jTextFieldUserName.getText())
                     && vendedor.validaCodVendedor(jPasswordFieldPass.getText())) {
                 beans.setNomeVendedor(jTextFieldNome.getText());
-                beans.setBiVendedor(jTextFieldBI.getText());
                 beans.setTelefoneVendedor(jTextFieldMobile.getText());
                 beans.setNomeUsuario(jTextFieldUserName.getText());
                 beans.setCodVendedor(jPasswordFieldPass.getText());
@@ -537,7 +495,6 @@ public class VendedorForm extends javax.swing.JInternalFrame {
                     && vendedor.validaCodVendedorUpdate(jPasswordFieldPass.getText(),
                             Integer.parseInt(jTextFieldID.getText()))) {
                 beans.setNomeVendedor(jTextFieldNome.getText());
-                beans.setBiVendedor(jTextFieldBI.getText());
                 beans.setTelefoneVendedor(jTextFieldMobile.getText());
                 beans.setNomeUsuario(jTextFieldUserName.getText());
                 beans.setCodVendedor(jPasswordFieldPass.getText());
@@ -554,7 +511,6 @@ public class VendedorForm extends javax.swing.JInternalFrame {
     private void jButtonEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEditarActionPerformed
         flag = 2;
         jTextFieldNome.setEnabled(true);
-        jTextFieldBI.setEnabled(true);
         jTextFieldMobile.setEnabled(true);
         jTextFieldUserName.setEnabled(true);
         jPasswordFieldPass.setEnabled(true);
@@ -589,13 +545,11 @@ public class VendedorForm extends javax.swing.JInternalFrame {
         } else {
             jTextFieldID.setText(jTableVendedor.getValueAt(row, 0).toString());
             jTextFieldNome.setText(jTableVendedor.getValueAt(row, 1).toString());
-            jTextFieldBI.setText(jTableVendedor.getValueAt(row, 2).toString());
             jTextFieldMobile.setText(jTableVendedor.getValueAt(row, 3).toString());
             jTextFieldUserName.setText(jTableVendedor.getValueAt(row, 4).toString());
             jComboBoxEstado.setSelectedItem(jTableVendedor.getValueAt(row, 5).toString());
             jPasswordFieldPass.setText(jTableVendedor.getValueAt(row, 6).toString());
             jTextFieldNome.setEnabled(!true);
-            jTextFieldBI.setEnabled(!true);
             jTextFieldMobile.setEnabled(!true);
             jTextFieldUserName.setEnabled(!true);
             jPasswordFieldPass.setEnabled(!true);
@@ -668,7 +622,6 @@ public class VendedorForm extends javax.swing.JInternalFrame {
     private javax.swing.JComboBox<String> jComboBoxEstado;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -679,7 +632,6 @@ public class VendedorForm extends javax.swing.JInternalFrame {
     private javax.swing.JPasswordField jPasswordFieldPass;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTableVendedor;
-    private javax.swing.JTextField jTextFieldBI;
     private javax.swing.JTextField jTextFieldID;
     private javax.swing.JTextField jTextFieldMobile;
     private javax.swing.JTextField jTextFieldNome;
