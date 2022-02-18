@@ -135,7 +135,7 @@ public class LoginForm extends javax.swing.JFrame {
         jButtonEntrar.setBackground(new java.awt.Color(0, 102, 153));
         jButtonEntrar.setFont(new java.awt.Font("Dialog", 3, 14)); // NOI18N
         jButtonEntrar.setForeground(new java.awt.Color(255, 255, 255));
-        jButtonEntrar.setText("Acessar");
+        jButtonEntrar.setText("Entrar");
         jButtonEntrar.setBorderPainted(false);
         jButtonEntrar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButtonEntrar.setFocusPainted(false);
@@ -161,7 +161,7 @@ public class LoginForm extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("GungsuhChe", 3, 30)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Acesso Ao Sistema ");
+        jLabel1.setText("Faça seu Login ");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
