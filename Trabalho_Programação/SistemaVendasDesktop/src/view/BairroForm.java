@@ -76,6 +76,7 @@ public class BairroForm extends javax.swing.JInternalFrame {
 
         setClosable(true);
         setIconifiable(true);
+        setTitle("Cadastro de Bairro");
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 

@@ -106,6 +106,7 @@ public class EnderecoForm extends javax.swing.JInternalFrame {
 
         setClosable(true);
         setIconifiable(true);
+        setTitle("Cadastro de Endereço");
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -116,12 +117,14 @@ public class EnderecoForm extends javax.swing.JInternalFrame {
         jLabel1.setText("ID:");
 
         jTextFieldID.setFont(new java.awt.Font("Century Gothic", 3, 16)); // NOI18N
+        jTextFieldID.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jTextFieldID.setEnabled(false);
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel2.setText("CEP:");
 
         jTextFieldCep.setFont(new java.awt.Font("Century Gothic", 3, 16)); // NOI18N
+        jTextFieldCep.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jTextFieldCep.setEnabled(false);
 
         jButtonNovo.setBackground(new java.awt.Color(0, 102, 153));
@@ -237,11 +240,13 @@ public class EnderecoForm extends javax.swing.JInternalFrame {
         jLabel3.setText("LOGRADOURO:");
 
         jTextFieldLogradouro.setFont(new java.awt.Font("Century Gothic", 3, 16)); // NOI18N
+        jTextFieldLogradouro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jTextFieldLogradouro.setEnabled(false);
 
         jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel7.setText("COD. BAIRRO");
 
+        jTextFieldCodBairro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jTextFieldCodBairro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldCodBairroActionPerformed(evt);
@@ -276,10 +281,12 @@ public class EnderecoForm extends javax.swing.JInternalFrame {
         jTextFieldNomeBairro.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldNomeBairro.setFont(new java.awt.Font("Segoe UI", 3, 16)); // NOI18N
         jTextFieldNomeBairro.setForeground(new java.awt.Color(0, 0, 204));
+        jTextFieldNomeBairro.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         jLabel11.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel11.setText("COD. CIDADE");
 
+        jTextFieldCodCidade.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jTextFieldCodCidade.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldCodCidadeActionPerformed(evt);
@@ -311,6 +318,7 @@ public class EnderecoForm extends javax.swing.JInternalFrame {
         jTextFieldNomeCidade.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldNomeCidade.setFont(new java.awt.Font("Segoe UI", 3, 16)); // NOI18N
         jTextFieldNomeCidade.setForeground(new java.awt.Color(0, 0, 204));
+        jTextFieldNomeCidade.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         jLabel12.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel12.setText("CIDADE:");

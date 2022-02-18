@@ -91,6 +91,7 @@ public class ProdutoForm extends javax.swing.JInternalFrame {
 
         setClosable(true);
         setIconifiable(true);
+        setTitle("Cadastro de Produtos");
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -98,59 +99,43 @@ public class ProdutoForm extends javax.swing.JInternalFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("ID:");
 
-        jTextFieldID.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldID.setFont(new java.awt.Font("Century Gothic", 3, 16)); // NOI18N
-        jTextFieldID.setForeground(new java.awt.Color(0, 0, 0));
         jTextFieldID.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jTextFieldID.setEnabled(false);
 
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Nome do Produto:");
 
-        jTextFieldNome.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldNome.setFont(new java.awt.Font("Century Gothic", 3, 16)); // NOI18N
-        jTextFieldNome.setForeground(new java.awt.Color(0, 0, 0));
         jTextFieldNome.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jTextFieldNome.setEnabled(false);
 
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Preco do Produto:");
 
-        jTextFieldPreco.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldPreco.setFont(new java.awt.Font("Century Gothic", 3, 16)); // NOI18N
-        jTextFieldPreco.setForeground(new java.awt.Color(0, 0, 0));
         jTextFieldPreco.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jTextFieldPreco.setEnabled(false);
 
         jLabel4.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Stock:");
 
-        jTextFieldStock.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldStock.setFont(new java.awt.Font("Century Gothic", 3, 16)); // NOI18N
-        jTextFieldStock.setForeground(new java.awt.Color(0, 0, 0));
         jTextFieldStock.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jTextFieldStock.setEnabled(false);
 
         jLabel5.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Estado:");
 
-        jComboBoxEstado.setBackground(new java.awt.Color(255, 255, 255));
         jComboBoxEstado.setFont(new java.awt.Font("Century Gothic", 3, 16)); // NOI18N
-        jComboBoxEstado.setForeground(new java.awt.Color(0, 0, 0));
         jComboBoxEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecione", "1", "0" }));
         jComboBoxEstado.setToolTipText("1 - Activo, 0 - Inactivo");
         jComboBoxEstado.setEnabled(false);
 
         jButtonNovo.setBackground(new java.awt.Color(0, 102, 153));
         jButtonNovo.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jButtonNovo.setForeground(new java.awt.Color(0, 0, 0));
         jButtonNovo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/add-button1.png"))); // NOI18N
         jButtonNovo.setText("Novo");
         jButtonNovo.setBorderPainted(false);
@@ -172,7 +157,6 @@ public class ProdutoForm extends javax.swing.JInternalFrame {
 
         jButtonSalvar.setBackground(new java.awt.Color(0, 153, 153));
         jButtonSalvar.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jButtonSalvar.setForeground(new java.awt.Color(0, 0, 0));
         jButtonSalvar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/floppy.png"))); // NOI18N
         jButtonSalvar.setText("Salvar");
         jButtonSalvar.setBorderPainted(false);
@@ -195,7 +179,6 @@ public class ProdutoForm extends javax.swing.JInternalFrame {
 
         jButtonEditar.setBackground(new java.awt.Color(153, 255, 153));
         jButtonEditar.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jButtonEditar.setForeground(new java.awt.Color(0, 0, 0));
         jButtonEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/edit.png"))); // NOI18N
         jButtonEditar.setText("Editar");
         jButtonEditar.setBorderPainted(false);
@@ -218,7 +201,6 @@ public class ProdutoForm extends javax.swing.JInternalFrame {
 
         jButtonEliminar.setBackground(new java.awt.Color(241, 116, 33));
         jButtonEliminar.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jButtonEliminar.setForeground(new java.awt.Color(0, 0, 0));
         jButtonEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/delete.png"))); // NOI18N
         jButtonEliminar.setText("Eliminar");
         jButtonEliminar.setBorderPainted(false);
@@ -241,7 +223,6 @@ public class ProdutoForm extends javax.swing.JInternalFrame {
 
         jButtonCancel.setBackground(new java.awt.Color(255, 51, 51));
         jButtonCancel.setFont(new java.awt.Font("Segoe UI Black", 1, 14)); // NOI18N
-        jButtonCancel.setForeground(new java.awt.Color(0, 0, 0));
         jButtonCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cancel.png"))); // NOI18N
         jButtonCancel.setText("Cancelar");
         jButtonCancel.setBorderPainted(false);
