@@ -838,6 +838,7 @@ public class VendasForm extends javax.swing.JInternalFrame {
                     ClienteForm form = new ClienteForm();
                     MainForm.jDesktopPane.add(form);
                     form.setVisible(true);
+                    daoCliente = new DaoCliente();
                 }
             }
         }
@@ -862,6 +863,7 @@ public class VendasForm extends javax.swing.JInternalFrame {
                     ProdutoForm form = new ProdutoForm();
                     MainForm.jDesktopPane.add(form);
                     form.setVisible(true);
+                    daoProduto = new DaoProduto();
                 }
             }
         }

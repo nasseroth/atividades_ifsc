@@ -701,6 +701,7 @@ public class EnderecoForm extends javax.swing.JInternalFrame {
                     BairroForm form = new BairroForm();
                     MainForm.jDesktopPane.add(form);
                     form.setVisible(true);
+                    daoBairro = new DaoBairro();
                 }
             }
         }
@@ -723,6 +724,7 @@ public class EnderecoForm extends javax.swing.JInternalFrame {
                     CidadeForm form = new CidadeForm();
                     MainForm.jDesktopPane.add(form);
                     form.setVisible(true);
+                    daoCidade = new DaoCidade();
                 }
             }
         }
