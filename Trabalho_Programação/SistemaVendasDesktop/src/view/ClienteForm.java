@@ -837,6 +837,9 @@ public class ClienteForm extends javax.swing.JInternalFrame {
         jTextFieldEmail.setEnabled(true);
         jTextFieldComplementoEndereco.setEnabled(true);
         jTextFieldCodEndereco.setEnabled(true);
+        if (jTextFieldCodEndereco.getText() != null) {
+            buscaEndereco();
+        }
         jButtonSalvar.setEnabled(true);
         jButtonCancelar.setEnabled(true);
         jButtonNovo.setEnabled(!true);

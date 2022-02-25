@@ -24,7 +24,7 @@ public class BairroForm extends javax.swing.JInternalFrame {
     }
 
     //Metodo resposanvel por listar os dados na tabela
-    private void listar() {
+    public void listar() {
         List<BairroBeans> lista = bairro.listarBairro();
         model = (DefaultTableModel) jTableBairro.getModel();
         Object[] objects = new Object[5];
@@ -37,14 +37,14 @@ public class BairroForm extends javax.swing.JInternalFrame {
     }
 
     //Limpa a tabela quando ha uma actualizacao 
-    private void limparTabela() {
+    public void limparTabela() {
         for (int i = 0; i < model.getRowCount(); i++) {
             model.removeRow(i);
             i = i - 1;
         }
     }
 
-    private void refreshForm() {
+    public void refreshForm() {
         jTextFieldNome.setEnabled(!true);
         jButtonNovo.setEnabled(true);
         jButtonSalvar.setEnabled(!true);

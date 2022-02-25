@@ -1,5 +1,12 @@
 package view;
 
+import controller.BairroController;
+import controller.CidadeController;
+import controller.ClienteController;
+import controller.EnderecoController;
+import controller.ProdutoController;
+import controller.VendasController;
+import controller.VendedorController;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Image;
@@ -236,23 +243,27 @@ public class MainForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemSobreActionPerformed
 
     private void jMenuItemVendassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemVendassActionPerformed
-        VendasForm form = new VendasForm();
-        centralizarForm(form);
+        VendasForm vendasForm = new VendasForm();
+        VendasController vendasController = new VendasController(vendasForm);
+        vendasForm.setVisible(true);
     }//GEN-LAST:event_jMenuItemVendassActionPerformed
 
     private void jMenuItemVendedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemVendedorActionPerformed
-        VendedorForm form = new VendedorForm();
-        centralizarForm(form);
+        VendedorForm vendedorForm = new VendedorForm();
+        VendedorController vendedorController = new VendedorController(vendedorForm);
+        vendedorForm.setVisible(true);
     }//GEN-LAST:event_jMenuItemVendedorActionPerformed
 
     private void jMenuItemClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemClienteActionPerformed
-        ClienteForm form = new ClienteForm();
-        centralizarForm(form);
+        ClienteForm clienteForm = new ClienteForm();
+        ClienteController clienteController = new ClienteController(clienteForm);
+        clienteForm.setVisible(true);
     }//GEN-LAST:event_jMenuItemClienteActionPerformed
 
     private void jMenuItemProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemProdutoActionPerformed
-        ProdutoForm form = new ProdutoForm();
-        centralizarForm(form);
+        ProdutoForm produtoForm = new ProdutoForm();
+        ProdutoController produtoController = new ProdutoController(produtoForm);
+        produtoForm.setVisible(true);
     }//GEN-LAST:event_jMenuItemProdutoActionPerformed
 
     private void jMenuItemRelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemRelActionPerformed
@@ -270,18 +281,21 @@ public class MainForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItemSairActionPerformed
 
     private void jMenuItemBairroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemBairroActionPerformed
-        BairroForm form = new BairroForm();
-        centralizarForm(form);
+        BairroForm bairroForm = new BairroForm();
+        BairroController bairroController = new BairroController(bairroForm);
+        bairroForm.setVisible(true);
     }//GEN-LAST:event_jMenuItemBairroActionPerformed
 
     private void jMenuItemCidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCidadeActionPerformed
-        CidadeForm form = new CidadeForm();
-        centralizarForm(form);
+        CidadeForm cidadeForm = new CidadeForm();
+        CidadeController cidadeController = new CidadeController(cidadeForm);
+        cidadeForm.setVisible(true);
     }//GEN-LAST:event_jMenuItemCidadeActionPerformed
 
     private void jMenuItemEnderecoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEnderecoActionPerformed
-        EnderecoForm form = new EnderecoForm();
-        centralizarForm(form);
+        EnderecoForm enderecoForm = new EnderecoForm();
+        EnderecoController enderecoController = new EnderecoController(enderecoForm);
+        enderecoForm.setVisible(true);
     }//GEN-LAST:event_jMenuItemEnderecoActionPerformed
 
     void centralizarForm(JInternalFrame frame) {
