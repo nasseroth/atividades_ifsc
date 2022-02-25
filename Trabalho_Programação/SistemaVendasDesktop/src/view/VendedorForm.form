@@ -478,10 +478,10 @@
                       <Table columnCount="7" rowCount="0">
                         <Column editable="false" title="ID" type="java.lang.Object"/>
                         <Column editable="false" title="Nome do Vendedor " type="java.lang.Object"/>
-                        <Column editable="false" title="BI" type="java.lang.Object"/>
                         <Column editable="false" title="Telefone" type="java.lang.Object"/>
-                        <Column editable="false" title="Nome de Usuario" type="java.lang.Object"/>
+                        <Column editable="false" title="Nome de Usu&#xe1;rio" type="java.lang.Object"/>
                         <Column editable="false" title="Estado" type="java.lang.Object"/>
+                        <Column editable="false" title="Senha" type="java.lang.Object"/>
                         <Column editable="false" title="" type="java.lang.Object"/>
                       </Table>
                     </Property>

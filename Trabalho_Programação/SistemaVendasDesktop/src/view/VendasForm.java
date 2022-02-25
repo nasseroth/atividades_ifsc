@@ -882,8 +882,8 @@ public class VendasForm extends javax.swing.JInternalFrame {
     public void salvarVenda() {
         int idVend = LoginForm.idVendedor;
         int idCliente = DaoCliente.idCliente;
-        venda.setIdVendedor(idVend);
-        venda.setIdCliente(idCliente);
+        venda.setVendedor(new VendedorBeans(idVend));
+        venda.setCliente(new ClienteBeans(idCliente));
         venda.setNumeroVendas(jTextFieldNrSerie.getText());
         venda.setDataVenda(jTextFieldData.getText());
         venda.setValorVenda(totalPagar);
@@ -899,8 +899,8 @@ public class VendasForm extends javax.swing.JInternalFrame {
             int idProd = Integer.parseInt(jTableVenda.getValueAt(i, 1).toString());
             int quant = Integer.parseInt(jTableVenda.getValueAt(i, 3).toString());
             double total = Double.parseDouble(jTableVenda.getValueAt(i, 5).toString());
-            detalhe.setIdProduto(idProd);
-            detalhe.setIdVenda(idVendas);
+            detalhe.setProduto(new ProdutoBeans(idProd));
+            detalhe.setVenda(new VendaBeans(idVendas));
             detalhe.setQuantidade(quant);
             detalhe.setValorTotal(total);
             daoVenda.salvarDetalheVenda(detalhe);

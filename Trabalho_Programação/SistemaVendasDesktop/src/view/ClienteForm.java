@@ -49,7 +49,7 @@ public class ClienteForm extends javax.swing.JInternalFrame {
             objects[6] = lista.get(i).getFone2Cliente();
             objects[7] = lista.get(i).getEmailCliente();
             objects[8] = lista.get(i).getCompleEnderecoCliente();
-            objects[9] = lista.get(i).getIdCep();
+            objects[9] = lista.get(i).getCep().getIdCep();
 
             model.addRow(objects);
         }
@@ -586,7 +586,7 @@ public class ClienteForm extends javax.swing.JInternalFrame {
 
     private void jButtonEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEliminarActionPerformed
         int excluir = JOptionPane.showConfirmDialog(null, "Deseja excluir esse Registo?",
-            "Atencao", JOptionPane.YES_NO_OPTION);
+                "Atencao", JOptionPane.YES_NO_OPTION);
         if (excluir == JOptionPane.YES_OPTION) {
             beans.setIdCliente(Integer.parseInt(jTextFieldId.getText()));
             cliente.excluirCliente(beans);
@@ -727,7 +727,7 @@ public class ClienteForm extends javax.swing.JInternalFrame {
             jTextFieldCodEndereco.requestFocus();
         } else if (flag == 1) {
             beans.setNomeCliente(jTextFieldNome.getText());
-            SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
             try {
                 beans.setDtNasCliente(formatter.parse((jTextFieldNascimento.getText())));
             } catch (ParseException ex) {
@@ -740,7 +740,7 @@ public class ClienteForm extends javax.swing.JInternalFrame {
             beans.setFone2Cliente(jTextFieldFone2.getText());
             beans.setEmailCliente(jTextFieldEmail.getText());
             beans.setCompleEnderecoCliente(jTextFieldComplementoEndereco.getText());
-            beans.setIdCep(enderecoBeans.getIdCep());
+            beans.setCep(enderecoBeans);
 
             cliente.salvarCliente(beans);
             limparTabela();
@@ -771,14 +771,20 @@ public class ClienteForm extends javax.swing.JInternalFrame {
             jTextFieldId.setText("");
         } else {
             beans.setNomeCliente(jTextFieldNome.getText());
-            beans.setDtNasCliente(new Date(jTextFieldNascimento.getText()));
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+            try {
+                beans.setDtNasCliente(formatter.parse((jTextFieldNascimento.getText())));
+            } catch (ParseException ex) {
+                Logger.getLogger(ClienteForm.class.getName()).log(Level.SEVERE, null, ex);
+                beans.setDtNasCliente(new Date());
+            }
             beans.setCpfCliente(jTextFieldCpf.getText());
             beans.setRgCliente(jTextFieldRg.getText());
             beans.setFoneCliente(jTextFieldFone.getText());
             beans.setFone2Cliente(jTextFieldFone2.getText());
             beans.setEmailCliente(jTextFieldEmail.getText());
             beans.setCompleEnderecoCliente(jTextFieldComplementoEndereco.getText());
-            beans.setIdCep(enderecoBeans.getIdCep());
+            beans.setCep(enderecoBeans);
             beans.setIdCliente(Integer.parseInt(jTextFieldId.getText()));
             cliente.actualizarCliente(beans);
             limparTabela();
@@ -863,7 +869,7 @@ public class ClienteForm extends javax.swing.JInternalFrame {
             jTextFieldEmail.setText(jTableCliente.getValueAt(row, 7).toString());
             jTextFieldComplementoEndereco.setText(jTableCliente.getValueAt(row, 8).toString());
             jTextFieldCodEndereco.setText(jTableCliente.getValueAt(row, 9).toString());
-            
+
             jTextFieldNome.setEnabled(!true);
             jTextFieldNascimento.setEnabled(!true);
             jTextFieldCpf.setEnabled(!true);
@@ -873,8 +879,7 @@ public class ClienteForm extends javax.swing.JInternalFrame {
             jTextFieldEmail.setEnabled(!true);
             jTextFieldComplementoEndereco.setEnabled(!true);
             jTextFieldCodEndereco.setEnabled(!true);
-            
-            
+
             jButtonNovo.setEnabled(!true);
             jButtonSalvar.setEnabled(!true);
             jButtonEditar.setEnabled(true);
@@ -883,7 +888,6 @@ public class ClienteForm extends javax.swing.JInternalFrame {
         }
     }//GEN-LAST:event_jTableClienteMouseClicked
 
-   
     private void buscaEndereco() {
         if (jTextFieldCodEndereco.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Preencha o Campo para Buscar o Endereco");
@@ -906,7 +910,7 @@ public class ClienteForm extends javax.swing.JInternalFrame {
             }
         }
     }
- 
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonBuscaEndereco;
     private javax.swing.JButton jButtonCancelar;

@@ -10,6 +10,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import model.beans.ClienteBeans;
+import model.beans.EnderecoBeans;
 
 /**
  *
@@ -41,7 +42,7 @@ public class DaoCliente {
             pst.setString(6, beans.getFone2Cliente());
             pst.setString(7, beans.getEmailCliente());
             pst.setString(8, beans.getCompleEnderecoCliente());
-            pst.setInt(9, beans.getIdCep());
+            pst.setInt(9, beans.getCep().getIdCep());
             
             pst.execute();
             connection.commit();
@@ -70,7 +71,7 @@ public class DaoCliente {
                 beans.setFone2Cliente(rs.getString("fone2Cliente"));
                 beans.setEmailCliente(rs.getString("emailCliente"));
                 beans.setCompleEnderecoCliente(rs.getString("compleEnderecoCliente"));
-                beans.setIdCep(rs.getInt("idCep"));
+                beans.setCep(new EnderecoBeans(rs.getInt("idCep")));
                 
                 lista.add(beans);
             }
@@ -89,21 +90,22 @@ public class DaoCliente {
                     + "idCep = ? where idCliente = ?";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, beans.getNomeCliente());
-            ps.setDate(2, (Date) beans.getDtNasCliente());
+            ps.setDate(2, new Date(beans.getDtNasCliente().getTime()));
             ps.setString(3, beans.getCpfCliente());
             ps.setString(4, beans.getRgCliente());
             ps.setString(5, beans.getFoneCliente());
             ps.setString(6, beans.getFone2Cliente());
             ps.setString(7, beans.getEmailCliente());
             ps.setString(8, beans.getCompleEnderecoCliente());
-            ps.setInt(9, beans.getIdCep());
+            ps.setInt(9, beans.getCep().getIdCep());
             
 
-            ps.setInt(6, beans.getIdCliente());
+            ps.setInt(10, beans.getIdCliente());
             ps.execute();
             connection.commit();
             JOptionPane.showMessageDialog(null, "Dados Editados com Sucesso");
         } catch (SQLException ex) {
+            System.out.println(ex);
             JOptionPane.showMessageDialog(null, "Oops!\nErro ao actualizar cliente!!!");
         }
 
@@ -171,7 +173,7 @@ public class DaoCliente {
                 beans.setFone2Cliente(rs.getString("fone2Cliente"));
                 beans.setEmailCliente(rs.getString("emailCliente"));
                 beans.setCompleEnderecoCliente(rs.getString("compleEnderecoCliente"));
-                beans.setIdCep(rs.getInt("idCep"));
+                beans.setCep(new EnderecoBeans(rs.getInt("idCep")));
                 idCliente = rs.getInt("idCliente");
                 return beans;
             }

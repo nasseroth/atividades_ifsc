@@ -9,8 +9,8 @@ import java.util.Date;
 public class VendaBeans {
 
     private int idVenda;
-    private int idVendedor;
-    private int idCliente;
+    private VendedorBeans vendedor;
+    private ClienteBeans cliente;
     private String numeroVendas;
     private String dataVenda;
     private double valorVenda;
@@ -19,11 +19,14 @@ public class VendaBeans {
     public VendaBeans() {
     }
 
-    public VendaBeans(int idVenda, int idVendedor, int idCliente, String numeroVendas,
-            String dataVenda, double valorVenda, String estadoVenda) {
+    public VendaBeans(int idVenda) {
         this.idVenda = idVenda;
-        this.idVendedor = idVendedor;
-        this.idCliente = idCliente;
+    }
+
+    public VendaBeans(int idVenda, VendedorBeans vendedor, ClienteBeans cliente, String numeroVendas, String dataVenda, double valorVenda, String estadoVenda) {
+        this.idVenda = idVenda;
+        this.vendedor = vendedor;
+        this.cliente = cliente;
         this.numeroVendas = numeroVendas;
         this.dataVenda = dataVenda;
         this.valorVenda = valorVenda;
@@ -38,20 +41,20 @@ public class VendaBeans {
         this.idVenda = idVenda;
     }
 
-    public int getIdVendedor() {
-        return idVendedor;
+    public VendedorBeans getVendedor() {
+        return vendedor;
     }
 
-    public void setIdVendedor(int idVendedor) {
-        this.idVendedor = idVendedor;
+    public void setVendedor(VendedorBeans vendedor) {
+        this.vendedor = vendedor;
     }
 
-    public int getIdCliente() {
-        return idCliente;
+    public ClienteBeans getCliente() {
+        return cliente;
     }
 
-    public void setIdCliente(int idCliente) {
-        this.idCliente = idCliente;
+    public void setCliente(ClienteBeans cliente) {
+        this.cliente = cliente;
     }
 
     public String getNumeroVendas() {

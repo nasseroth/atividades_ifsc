@@ -7,19 +7,18 @@ package model.beans;
 public class DetalheVendaBeans {
 
     private int idDetalheVenda;
-    private int idVenda;
-    private int idProduto;
+    private VendaBeans venda;
+    private ProdutoBeans produto;
     private int quantidade;
     private double valorTotal;
 
     public DetalheVendaBeans() {
     }
 
-    public DetalheVendaBeans(int idDetalheVenda, int idVenda, int idProduto,
-            int quantidade, double valorTotal) {
+    public DetalheVendaBeans(int idDetalheVenda, VendaBeans venda, ProdutoBeans produto, int quantidade, double valorTotal) {
         this.idDetalheVenda = idDetalheVenda;
-        this.idVenda = idVenda;
-        this.idProduto = idProduto;
+        this.venda = venda;
+        this.produto = produto;
         this.quantidade = quantidade;
         this.valorTotal = valorTotal;
     }
@@ -32,20 +31,20 @@ public class DetalheVendaBeans {
         this.idDetalheVenda = idDetalheVenda;
     }
 
-    public int getIdVenda() {
-        return idVenda;
+    public VendaBeans getVenda() {
+        return venda;
     }
 
-    public void setIdVenda(int idVenda) {
-        this.idVenda = idVenda;
+    public void setVenda(VendaBeans venda) {
+        this.venda = venda;
     }
 
-    public int getIdProduto() {
-        return idProduto;
+    public ProdutoBeans getProduto() {
+        return produto;
     }
 
-    public void setIdProduto(int idProduto) {
-        this.idProduto = idProduto;
+    public void setProduto(ProdutoBeans produto) {
+        this.produto = produto;
     }
 
     public int getQuantidade() {
@@ -63,5 +62,6 @@ public class DetalheVendaBeans {
     public void setValorTotal(double valorTotal) {
         this.valorTotal = valorTotal;
     }
+
 
 }

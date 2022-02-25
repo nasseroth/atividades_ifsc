@@ -12,6 +12,10 @@ public class BairroBeans {
     public BairroBeans() {
     }
 
+    public BairroBeans(int idBairro) {
+        this.idBairro = idBairro;
+    }
+
     public BairroBeans(int idBairro, String nomeBairro) {
         this.idBairro = idBairro;
         this.nomeBairro = nomeBairro;

@@ -9,7 +9,6 @@ public class VendedorBeans {
     private int idVendedor;
     private String nomeUsuario;
     private String codVendedor;
-    private String biVendedor;
     private String nomeVendedor;
     private String telefoneVendedor;
     private String estadoVendedor;
@@ -17,12 +16,15 @@ public class VendedorBeans {
     public VendedorBeans() {
     }
 
+    public VendedorBeans(int idVendedor) {
+        this.idVendedor = idVendedor;
+    }
+
     public VendedorBeans(int idVendedor, String nomeUsuario, String codVendedor,
-            String biVendedor, String nomeVendedor, String telefoneVendedor, String estadoVendedor) {
+            String nomeVendedor, String telefoneVendedor, String estadoVendedor) {
         this.idVendedor = idVendedor;
         this.nomeUsuario = nomeUsuario;
         this.codVendedor = codVendedor;
-        this.biVendedor = biVendedor;
         this.nomeVendedor = nomeVendedor;
         this.telefoneVendedor = telefoneVendedor;
         this.estadoVendedor = estadoVendedor;
@@ -51,14 +53,6 @@ public class VendedorBeans {
 
     public void setCodVendedor(String codVendedor) {
         this.codVendedor = codVendedor;
-    }
-
-    public String getBiVendedor() {
-        return biVendedor;
-    }
-
-    public void setBiVendedor(String biVendedor) {
-        this.biVendedor = biVendedor;
     }
 
     public String getNomeVendedor() {

@@ -18,12 +18,16 @@ public class ClienteBeans {
     private String fone2Cliente;
     private String emailCliente;
     private String compleEnderecoCliente;
-    private int idCep;
+    private EnderecoBeans cep;
 
     public ClienteBeans() {
     }
 
-    public ClienteBeans(int idCliente, String nomeCliente, Date dtNasCliente, String cpfCliente, String rgCliente, String foneCliente, String fone2Cliente, String emailCliente, String compleEnderecoCliente, int idCep) {
+    public ClienteBeans(int idCliente) {
+        this.idCliente = idCliente;
+    }
+
+    public ClienteBeans(int idCliente, String nomeCliente, Date dtNasCliente, String cpfCliente, String rgCliente, String foneCliente, String fone2Cliente, String emailCliente, String compleEnderecoCliente, EnderecoBeans cep) {
         this.idCliente = idCliente;
         this.nomeCliente = nomeCliente;
         this.dtNasCliente = dtNasCliente;
@@ -33,7 +37,7 @@ public class ClienteBeans {
         this.fone2Cliente = fone2Cliente;
         this.emailCliente = emailCliente;
         this.compleEnderecoCliente = compleEnderecoCliente;
-        this.idCep = idCep;
+        this.cep = cep;
     }
 
     public int getIdCliente() {
@@ -108,12 +112,12 @@ public class ClienteBeans {
         this.compleEnderecoCliente = compleEnderecoCliente;
     }
 
-    public int getIdCep() {
-        return idCep;
+    public EnderecoBeans getCep() {
+        return cep;
     }
 
-    public void setIdCep(int idCep) {
-        this.idCep = idCep;
+    public void setCep(EnderecoBeans cep) {
+        this.cep = cep;
     }
 
 }

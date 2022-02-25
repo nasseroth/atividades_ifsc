@@ -25,15 +25,14 @@ public class DaoVendedor {
 
     public void inserirVendedor(VendedorBeans beans) {
         try {
-            String sql = "insert into vendedor(nomeUsuario, codVendedor, biVendedor,"
-                    + "nomeVendedor, telefoneVendedor, estado) values(?,?,?,?,?,?)";
+            String sql = "insert into vendedor(nomeUsuario, codVendedor,"
+                    + "nomeVendedor, telefoneVendedor, estado) values(?,?,?,?,?)";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, beans.getNomeUsuario());
             ps.setString(2, beans.getCodVendedor());
-            ps.setString(3, beans.getBiVendedor());
-            ps.setString(4, beans.getNomeVendedor());
-            ps.setString(5, beans.getTelefoneVendedor());
-            ps.setString(6, beans.getEstadoVendedor());
+            ps.setString(3, beans.getNomeVendedor());
+            ps.setString(4, beans.getTelefoneVendedor());
+            ps.setString(5, beans.getEstadoVendedor());
             ps.execute();
             connection.commit();
             JOptionPane.showMessageDialog(null, "Dados Salvos com Sucesso!");
@@ -53,7 +52,6 @@ public class DaoVendedor {
                 vendedorBeans.setIdVendedor(rs.getInt("idVendedor"));
                 vendedorBeans.setNomeUsuario(rs.getString("nomeUsuario"));
                 vendedorBeans.setCodVendedor(rs.getString("codVendedor"));
-                vendedorBeans.setBiVendedor(rs.getString("biVendedor"));
                 vendedorBeans.setNomeVendedor(rs.getString("nomeVendedor"));
                 vendedorBeans.setTelefoneVendedor(rs.getString("telefoneVendedor"));
                 vendedorBeans.setEstadoVendedor(rs.getString("estado"));
@@ -67,16 +65,15 @@ public class DaoVendedor {
 
     public void actualizaVendedor(VendedorBeans beans) {
         try {
-            String sql = "update vendedor set nomeUsuario = ?, codVendedor = ?, biVendedor = ?,"
+            String sql = "update vendedor set nomeUsuario = ?, codVendedor = ?,"
                     + "nomeVendedor = ?, telefoneVendedor = ?, estado = ? where idVendedor = ?";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, beans.getNomeUsuario());
             ps.setString(2, beans.getCodVendedor());
-            ps.setString(3, beans.getBiVendedor());
-            ps.setString(4, beans.getNomeVendedor());
-            ps.setString(5, beans.getTelefoneVendedor());
-            ps.setString(6, beans.getEstadoVendedor());
-            ps.setInt(7, beans.getIdVendedor());
+            ps.setString(3, beans.getNomeVendedor());
+            ps.setString(4, beans.getTelefoneVendedor());
+            ps.setString(5, beans.getEstadoVendedor());
+            ps.setInt(6, beans.getIdVendedor());
             ps.execute();
             connection.commit();
             JOptionPane.showMessageDialog(null, "Dados Editados com Sucesso");
@@ -166,7 +163,6 @@ public class DaoVendedor {
                 vendedorBeans.setIdVendedor(rs.getInt("idVendedor"));
                 vendedorBeans.setNomeUsuario(rs.getString("nomeUsuario"));
                 vendedorBeans.setCodVendedor(rs.getString("codVendedor"));
-                vendedorBeans.setBiVendedor(rs.getString("biVendedor"));
                 vendedorBeans.setNomeVendedor(rs.getString("nomeVendedor"));
                 vendedorBeans.setTelefoneVendedor(rs.getString("telefoneVendedor"));
                 vendedorBeans.setEstadoVendedor(rs.getString("estado"));

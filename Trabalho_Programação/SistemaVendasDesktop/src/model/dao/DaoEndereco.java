@@ -8,6 +8,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
+import model.beans.BairroBeans;
+import model.beans.CidadeBeans;
 import model.beans.EnderecoBeans;
 
 /**
@@ -31,8 +33,8 @@ public class DaoEndereco {
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, beans.getCep());
             ps.setString(2, beans.getLogradouroCep());
-            ps.setInt(3, beans.getIdBairro());
-            ps.setInt(4, beans.getIdCidade());
+            ps.setInt(3, beans.getBairro().getIdBairro());
+            ps.setInt(4, beans.getCidade().getIdCidade());
             ps.execute();
             connection.setAutoCommit(false);
             connection.commit();
@@ -54,8 +56,8 @@ public class DaoEndereco {
                 beans.setIdCep(rs.getInt("idCep"));
                 beans.setCep(rs.getString("cep"));
                 beans.setLogradouroCep(rs.getString("logradouroCep"));
-                beans.setIdBairro(rs.getInt("idBairro"));
-                beans.setIdCidade(rs.getInt("idCidade"));
+                beans.setBairro(new BairroBeans(rs.getInt("idBairro")));
+                beans.setCidade(new CidadeBeans(rs.getInt("idCidade")));
                 lista.add(beans);
             }
         } catch (SQLException ex) {
@@ -70,8 +72,8 @@ public class DaoEndereco {
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, beans.getCep());
             ps.setString(2, beans.getLogradouroCep());
-            ps.setInt(3, beans.getIdBairro());
-            ps.setInt(4, beans.getIdCidade());
+            ps.setInt(3, beans.getBairro().getIdBairro());
+            ps.setInt(4, beans.getCidade().getIdCidade());
             ps.setInt(5, beans.getIdCep());
             ps.execute();
             connection.commit();
@@ -105,8 +107,8 @@ public class DaoEndereco {
                 beans.setIdCep(rs.getInt("idCep"));
                 beans.setCep(rs.getString("cep"));
                 beans.setLogradouroCep(rs.getString("logradouroCep"));
-                beans.setIdBairro(rs.getInt("idBairro"));
-                beans.setIdCidade(rs.getInt("idCidade"));
+                beans.setBairro(new BairroBeans(rs.getInt("idBairro")));
+                beans.setCidade(new CidadeBeans(rs.getInt("idCidade")));
                 return beans;
             }
         } catch (SQLException ex) {

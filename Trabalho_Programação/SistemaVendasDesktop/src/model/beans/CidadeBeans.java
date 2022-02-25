@@ -13,6 +13,10 @@ public class CidadeBeans {
     public CidadeBeans() {
     }
 
+    public CidadeBeans(int idCidade) {
+        this.idCidade = idCidade;
+    }
+
     public CidadeBeans(int idCidade, String nomeCidade, String ufCidade) {
         this.idCidade = idCidade;
         this.nomeCidade = nomeCidade;

@@ -15,6 +15,10 @@ public class ProdutoBeans {
     public ProdutoBeans() {
     }
 
+    public ProdutoBeans(int idProduto) {
+        this.idProduto = idProduto;
+    }
+
     public ProdutoBeans(int idProduto, String nomeProduto, double precoProduto, int quantProduto, String estadoProduto) {
         this.idProduto = idProduto;
         this.nomeProduto = nomeProduto;

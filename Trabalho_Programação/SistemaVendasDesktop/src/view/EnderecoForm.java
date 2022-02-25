@@ -42,8 +42,8 @@ public class EnderecoForm extends javax.swing.JInternalFrame {
             objects[0] = lista.get(i).getIdCep();
             objects[1] = lista.get(i).getCep();
             objects[2] = lista.get(i).getLogradouroCep();
-            objects[3] = lista.get(i).getIdBairro();
-            objects[4] = lista.get(i).getIdCidade();
+            objects[3] = lista.get(i).getBairro().getIdBairro();
+            objects[4] = lista.get(i).getCidade().getIdCidade();
 
             model.addRow(objects);
         }
@@ -603,8 +603,8 @@ public class EnderecoForm extends javax.swing.JInternalFrame {
         } else if (flag == 1) {
             beans.setCep(jTextFieldCep.getText());
             beans.setLogradouroCep(jTextFieldLogradouro.getText());
-            beans.setIdBairro(bairroBeans.getIdBairro());
-            beans.setIdCidade(cidadeBeans.getIdCidade());
+            beans.setBairro(bairroBeans);
+            beans.setCidade(cidadeBeans);
             endereco.inserirEndereco(beans);
             limparTabela();
             listar();
@@ -613,8 +613,8 @@ public class EnderecoForm extends javax.swing.JInternalFrame {
             beans.setIdCep(Integer.parseInt(jTextFieldID.getText()));
             beans.setCep(jTextFieldCep.getText());
             beans.setLogradouroCep(jTextFieldLogradouro.getText());
-            beans.setIdBairro(bairroBeans.getIdBairro());
-            beans.setIdCidade(cidadeBeans.getIdCidade());
+            beans.setBairro(bairroBeans);
+            beans.setCidade(cidadeBeans);
             endereco.actualizarEndereco(beans);
             limparTabela();
             listar();

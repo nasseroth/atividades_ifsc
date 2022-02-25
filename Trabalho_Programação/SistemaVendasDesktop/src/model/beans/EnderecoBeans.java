@@ -9,18 +9,22 @@ public class EnderecoBeans {
     private int idCep;
     private String cep;
     private String logradouroCep;
-    private int idBairro; 
-    private int idCidade;
+    private BairroBeans bairro; 
+    private CidadeBeans cidade;
 
     public EnderecoBeans() {
     }
 
-    public EnderecoBeans(int idCep, String cep, String logradouroCep, int idBairro, int idCidade) {
+    public EnderecoBeans(int idCep) {
+        this.idCep = idCep;
+    }
+
+    public EnderecoBeans(int idCep, String cep, String logradouroCep, BairroBeans bairro, CidadeBeans cidade) {
         this.idCep = idCep;
         this.cep = cep;
         this.logradouroCep = logradouroCep;
-        this.idBairro = idBairro;
-        this.idCidade = idCidade;
+        this.bairro = bairro;
+        this.cidade = cidade;
     }
 
     public int getIdCep() {
@@ -47,19 +51,21 @@ public class EnderecoBeans {
         this.logradouroCep = logradouroCep;
     }
 
-    public int getIdBairro() {
-        return idBairro;
+    public BairroBeans getBairro() {
+        return bairro;
     }
 
-    public void setIdBairro(int idBairro) {
-        this.idBairro = idBairro;
+    public void setBairro(BairroBeans bairro) {
+        this.bairro = bairro;
     }
 
-    public int getIdCidade() {
-        return idCidade;
+    public CidadeBeans getCidade() {
+        return cidade;
     }
 
-    public void setIdCidade(int idCidade) {
-        this.idCidade = idCidade;
+    public void setCidade(CidadeBeans cidade) {
+        this.cidade = cidade;
     }
+
+
 }

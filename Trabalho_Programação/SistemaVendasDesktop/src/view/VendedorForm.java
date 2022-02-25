@@ -27,15 +27,14 @@ public class VendedorForm extends javax.swing.JInternalFrame {
     private void listar() {
         List<VendedorBeans> lista = vendedor.listarVendedor();
         model = (DefaultTableModel) jTableVendedor.getModel();
-        Object[] objects = new Object[7];
+        Object[] objects = new Object[6];
         for (int i = 0; i < lista.size(); i++) {
             objects[0] = lista.get(i).getIdVendedor();
             objects[1] = lista.get(i).getNomeVendedor();
-            objects[2] = lista.get(i).getBiVendedor();
-            objects[3] = lista.get(i).getTelefoneVendedor();
-            objects[4] = lista.get(i).getNomeUsuario();
-            objects[5] = lista.get(i).getEstadoVendedor();
-            objects[6] = lista.get(i).getCodVendedor();
+            objects[2] = lista.get(i).getTelefoneVendedor();
+            objects[3] = lista.get(i).getNomeUsuario();
+            objects[4] = lista.get(i).getEstadoVendedor();
+            objects[5] = lista.get(i).getCodVendedor();
             model.addRow(objects);
         }
         jTableVendedor.setModel(model);
@@ -345,7 +344,7 @@ public class VendedorForm extends javax.swing.JInternalFrame {
 
             },
             new String [] {
-                "ID", "Nome do Vendedor ", "BI", "Telefone", "Nome de Usuario", "Estado", ""
+                "ID", "Nome do Vendedor ", "Telefone", "Nome de Usuário", "Estado", "Senha", ""
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -545,10 +544,10 @@ public class VendedorForm extends javax.swing.JInternalFrame {
         } else {
             jTextFieldID.setText(jTableVendedor.getValueAt(row, 0).toString());
             jTextFieldNome.setText(jTableVendedor.getValueAt(row, 1).toString());
-            jTextFieldMobile.setText(jTableVendedor.getValueAt(row, 3).toString());
-            jTextFieldUserName.setText(jTableVendedor.getValueAt(row, 4).toString());
-            jComboBoxEstado.setSelectedItem(jTableVendedor.getValueAt(row, 5).toString());
-            jPasswordFieldPass.setText(jTableVendedor.getValueAt(row, 6).toString());
+            jTextFieldMobile.setText(jTableVendedor.getValueAt(row, 2).toString());
+            jTextFieldUserName.setText(jTableVendedor.getValueAt(row, 3).toString());
+            jComboBoxEstado.setSelectedItem(jTableVendedor.getValueAt(row, 4).toString());
+            jPasswordFieldPass.setText(jTableVendedor.getValueAt(row, 5).toString());
             jTextFieldNome.setEnabled(!true);
             jTextFieldMobile.setEnabled(!true);
             jTextFieldUserName.setEnabled(!true);

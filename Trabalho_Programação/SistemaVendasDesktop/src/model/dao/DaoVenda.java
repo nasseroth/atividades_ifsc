@@ -56,8 +56,8 @@ public class DaoVenda {
             String sql = "insert into vendas(vendedor_idVendedor, cliente_idCliente, numeroVendas,"
                     + "dataVenda, valorVenda, estadoVenda) values(?,?,?,?,?,?)";
             PreparedStatement ps = connection.prepareStatement(sql);
-            ps.setInt(1, beans.getIdVendedor());
-            ps.setInt(2, beans.getIdCliente());
+            ps.setInt(1, beans.getVendedor().getIdVendedor());
+            ps.setInt(2, beans.getCliente().getIdCliente());
             ps.setString(3, beans.getNumeroVendas());
             ps.setString(4, beans.getDataVenda());
             ps.setDouble(5, beans.getValorVenda());
@@ -76,8 +76,8 @@ public class DaoVenda {
             String sql = "insert into detalhesvenda(venda_idVenda, produto_idProduto, "
                     + "quantidade, valorTotal) values(?,?,?,?)";
             PreparedStatement ps = connection.prepareStatement(sql);
-            ps.setInt(1, beans.getIdVenda());
-            ps.setInt(2, beans.getIdProduto());
+            ps.setInt(1, beans.getVenda().getIdVenda());
+            ps.setInt(2, beans.getProduto().getIdProduto());
             ps.setInt(3, beans.getQuantidade());
             ps.setDouble(4, beans.getValorTotal());
             ps.executeUpdate();
