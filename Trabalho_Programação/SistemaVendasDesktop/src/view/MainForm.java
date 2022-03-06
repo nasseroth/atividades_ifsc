@@ -1,8 +1,10 @@
 package view;
 
 import controller.BairroController;
+import controller.CaracteristicaProdutoController;
 import controller.CidadeController;
 import controller.ClienteController;
+import controller.CorController;
 import controller.EnderecoController;
 import controller.ProdutoController;
 import controller.VendasController;
@@ -64,6 +66,8 @@ public class MainForm extends javax.swing.JFrame {
         jMenuItemBairro = new javax.swing.JMenuItem();
         jMenuItemCidade = new javax.swing.JMenuItem();
         jMenuItemEndereco = new javax.swing.JMenuItem();
+        jMenuItemEndereco1 = new javax.swing.JMenuItem();
+        jMenuItemCaracteristicaProduto = new javax.swing.JMenuItem();
         jMenuRelatorio = new javax.swing.JMenu();
         jMenuItemRel = new javax.swing.JMenuItem();
         jMenuAjuda = new javax.swing.JMenu();
@@ -165,6 +169,26 @@ public class MainForm extends javax.swing.JFrame {
             }
         });
         jMenuRegistos.add(jMenuItemEndereco);
+
+        jMenuItemEndereco1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItemEndereco1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cores.png"))); // NOI18N
+        jMenuItemEndereco1.setText("Cores");
+        jMenuItemEndereco1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemEndereco1ActionPerformed(evt);
+            }
+        });
+        jMenuRegistos.add(jMenuItemEndereco1);
+
+        jMenuItemCaracteristicaProduto.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItemCaracteristicaProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/caracteristica.png"))); // NOI18N
+        jMenuItemCaracteristicaProduto.setText("Caracteristica Prod.");
+        jMenuItemCaracteristicaProduto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemCaracteristicaProdutoActionPerformed(evt);
+            }
+        });
+        jMenuRegistos.add(jMenuItemCaracteristicaProduto);
 
         jMenuBar1.add(jMenuRegistos);
 
@@ -298,6 +322,18 @@ public class MainForm extends javax.swing.JFrame {
         enderecoForm.setVisible(true);
     }//GEN-LAST:event_jMenuItemEnderecoActionPerformed
 
+    private void jMenuItemEndereco1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemEndereco1ActionPerformed
+        CorForm corForm = new CorForm();
+        CorController corController = new CorController(corForm);
+        corForm.setVisible(true);
+    }//GEN-LAST:event_jMenuItemEndereco1ActionPerformed
+
+    private void jMenuItemCaracteristicaProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemCaracteristicaProdutoActionPerformed
+        CaracteristicaProdutoForm caracteristicaProdutoForm = new CaracteristicaProdutoForm();
+        CaracteristicaProdutoController caracteristicaProdutoController = new CaracteristicaProdutoController(caracteristicaProdutoForm);
+        caracteristicaProdutoForm.setVisible(true);
+    }//GEN-LAST:event_jMenuItemCaracteristicaProdutoActionPerformed
+
     void centralizarForm(JInternalFrame frame) {
         jDesktopPane.add(frame);
         Dimension dimension = jDesktopPane.getSize();
@@ -313,9 +349,11 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JMenu jMenuAjuda;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItemBairro;
+    private javax.swing.JMenuItem jMenuItemCaracteristicaProduto;
     private javax.swing.JMenuItem jMenuItemCidade;
     private javax.swing.JMenuItem jMenuItemCliente;
     private javax.swing.JMenuItem jMenuItemEndereco;
+    private javax.swing.JMenuItem jMenuItemEndereco1;
     private javax.swing.JMenuItem jMenuItemOutra;
     private javax.swing.JMenuItem jMenuItemProduto;
     private javax.swing.JMenuItem jMenuItemRel;

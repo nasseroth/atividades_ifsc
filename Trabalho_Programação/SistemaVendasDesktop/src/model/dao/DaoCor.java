@@ -8,28 +8,28 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
-import model.beans.BairroBeans;
+import model.beans.CorBeans;
 
 /**
  *
  * @author Nasser-Othman
  */
-public class DaoBairro {
+public class DaoCor {
 
-    BairroBeans bairroBeans = new BairroBeans();
+    CorBeans corBeans = new CorBeans();
     private Connection connection;
     private int resposta = 0;
 
-    public DaoBairro() {
+    public DaoCor() {
         connection = SingleConnection.getConnection();
     }
 
-    public void inserirBairro(BairroBeans beans) {
+    public void inserirCor(CorBeans beans) {
         try {
-            String sql = "insert into bairro(nomeBairro)"
+            String sql = "insert into cor(nomeCor)"
                     + "values (?)";
             PreparedStatement ps = connection.prepareStatement(sql);
-            ps.setString(1, beans.getNomeBairro());
+            ps.setString(1, beans.getNomeCor());
             ps.execute();
             connection.setAutoCommit(false);
             connection.commit();
@@ -40,16 +40,16 @@ public class DaoBairro {
         }
     }
 
-    public List<BairroBeans> listarBairro() {
-        List<BairroBeans> lista = new ArrayList<BairroBeans>();
+    public List<CorBeans> listarCor() {
+        List<CorBeans> lista = new ArrayList<CorBeans>();
         try {
-            String sql = "select * from bairro";
+            String sql = "select * from cor";
             PreparedStatement ps = connection.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                BairroBeans beans = new BairroBeans();
-                beans.setIdBairro(rs.getInt("idBairro"));
-                beans.setNomeBairro(rs.getString("nomeBairro"));
+                CorBeans beans = new CorBeans();
+                beans.setIdCor(rs.getInt("idCor"));
+                beans.setNomeCor(rs.getString("nomeCor"));
                 lista.add(beans);
             }
         } catch (SQLException ex) {
@@ -58,25 +58,26 @@ public class DaoBairro {
         return lista;
     }
 
-    public void actualizarBairro(BairroBeans beans) {
+    public void actualizarCor(CorBeans beans) {
         try {
-            String sql = "update bairro set nomeBairro = ? where idBairro = ?";
+            String sql = "update cor set nomeCor = ? where idCor = ?";
             PreparedStatement ps = connection.prepareStatement(sql);
-            ps.setString(1, beans.getNomeBairro());
-            ps.setInt(2, beans.getIdBairro());
+            ps.setString(1, beans.getNomeCor());
+            ps.setInt(2, beans.getIdCor());
             ps.execute();
             connection.commit();
             JOptionPane.showMessageDialog(null, "Dados Editados com Sucesso!");
         } catch (SQLException ex) {
+            System.out.println(ex);
             JOptionPane.showMessageDialog(null, "Oops!\nErro ao Editar Dados!");
         }
     }
 
-    public void excluirBairro(BairroBeans beans) {
+    public void excluirCor(CorBeans beans) {
         try {
-            String sql = "delete from bairro where idBairro = ?";
+            String sql = "delete from cor where idCor = ?";
             PreparedStatement ps = connection.prepareStatement(sql);
-            ps.setInt(1, beans.getIdBairro());
+            ps.setInt(1, beans.getIdCor());
             ps.execute();
             connection.commit();
             JOptionPane.showMessageDialog(null, "Dados Excluidos com Sucesso!!");
@@ -85,9 +86,9 @@ public class DaoBairro {
         }
     }
 
-    public boolean validaNomeBairro(String nomeProd) {
+    public boolean validaNomeCor(String nomeProd) {
         try {
-            String sql = "select count(1) as quant from bairro where nomeBairro = '" + nomeProd + "'";
+            String sql = "select count(1) as quant from cor where nomeCor = '" + nomeProd + "'";
             PreparedStatement ps = connection.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
@@ -99,10 +100,10 @@ public class DaoBairro {
         return false;
     }
 
-    public boolean validaNomeBairroUpdate(String nomeProd, int id) {
+    public boolean validaNomeCorUpdate(String nomeProd, int id) {
         try {
-            String sql = "select count(1) as quant from bairro where nomeBairro = '" + nomeProd + "'"
-                    + "and idBairro <> " + id;
+            String sql = "select count(1) as quant from cor where nomeCor = '" + nomeProd + "'"
+                    + "and idCor <> " + id;
             PreparedStatement ps = connection.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
@@ -114,20 +115,20 @@ public class DaoBairro {
         return false;
     }
 
-    public BairroBeans consultaBairro(int cod) {
+    public CorBeans consultaCor(int cod) {
         try {
-            String sql = "select * from bairro where idBairro = " + cod;
+            String sql = "select * from cor where idCor = " + cod;
             PreparedStatement ps = connection.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
-                BairroBeans beans = new BairroBeans();
-                beans.setIdBairro(rs.getInt("idBairro"));
-                beans.setNomeBairro(rs.getString("nomeBairro"));
+                CorBeans beans = new CorBeans();
+                beans.setIdCor(rs.getInt("idCor"));
+                beans.setNomeCor(rs.getString("nomeCor"));
                 return beans;
             }
         } catch (SQLException ex) {
             System.out.println(ex);
-            JOptionPane.showMessageDialog(null, "Erro ao buscar Bairro!");
+            JOptionPane.showMessageDialog(null, "Erro ao buscar Cor!");
         }
         return null;
     }

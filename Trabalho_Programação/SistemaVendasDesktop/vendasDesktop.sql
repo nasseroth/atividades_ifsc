@@ -13,6 +13,39 @@ CREATE TABLE IF NOT EXISTS `cidade` (
   `nomeCidade` VARCHAR(45) NOT NULL,
   `ufCidade` VARCHAR(2) NOT NULL,
   PRIMARY KEY (`idcidade`));
+  
+  -- cor nova
+  
+  
+CREATE TABLE IF NOT EXISTS `cor` (
+  `idCor` INT NOT NULL AUTO_INCREMENT,
+  `nomeCor` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idCor`))
+ENGINE = InnoDB;
+
+-- caracteristica
+
+CREATE TABLE IF NOT EXISTS `caracteristicaProduto` (
+  `idCaracteristicaProduto` INT NOT NULL AUTO_INCREMENT,
+  `idProduto` INT NOT NULL,
+  `idCor` INT NOT NULL,
+  `tamanhoProduto` VARCHAR(3) NOT NULL,
+  `barraProduto` VARCHAR(13) NOT NULL,
+  `qtdEstoqueProduto` FLOAT NOT NULL,
+   PRIMARY KEY (`idCaracteristicaProduto`),
+  CONSTRAINT `fk_caracteristicaProduto_produto`
+    FOREIGN KEY (`idProduto`)
+    REFERENCES `produto` (`idProduto`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_caracteristicaProduto_cor`
+    FOREIGN KEY (`idCor`)
+    REFERENCES `cor` (`idCor`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+---
 
 CREATE TABLE IF NOT EXISTS `endereco` (
   `idCep` INT primary key AUTO_INCREMENT,

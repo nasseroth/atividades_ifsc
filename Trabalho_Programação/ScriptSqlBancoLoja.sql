@@ -250,7 +250,7 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `bancoLoja`.`cor` (
   `idcor` INT NOT NULL AUTO_INCREMENT,
-  `descricaoCor` VARCHAR(45) NOT NULL,
+  `nomeCor` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`idcor`))
 ENGINE = InnoDB;
 
