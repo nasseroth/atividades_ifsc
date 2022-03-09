@@ -130,7 +130,7 @@ public class MainForm extends javax.swing.JFrame {
         });
         jMenuRegistos.add(jMenuItemCliente);
 
-        jMenuItemProduto.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItemProduto.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItemProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/product.png"))); // NOI18N
         jMenuItemProduto.setText("Produto");
         jMenuItemProduto.addActionListener(new java.awt.event.ActionListener() {
@@ -140,7 +140,7 @@ public class MainForm extends javax.swing.JFrame {
         });
         jMenuRegistos.add(jMenuItemProduto);
 
-        jMenuItemBairro.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItemBairro.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItemBairro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/bairro.png"))); // NOI18N
         jMenuItemBairro.setText("Bairro");
         jMenuItemBairro.addActionListener(new java.awt.event.ActionListener() {
@@ -150,7 +150,7 @@ public class MainForm extends javax.swing.JFrame {
         });
         jMenuRegistos.add(jMenuItemBairro);
 
-        jMenuItemCidade.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItemCidade.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_I, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItemCidade.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cidade.png"))); // NOI18N
         jMenuItemCidade.setText("Cidade");
         jMenuItemCidade.addActionListener(new java.awt.event.ActionListener() {
@@ -170,7 +170,7 @@ public class MainForm extends javax.swing.JFrame {
         });
         jMenuRegistos.add(jMenuItemEndereco);
 
-        jMenuItemEndereco1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItemEndereco1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_J, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItemEndereco1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cores.png"))); // NOI18N
         jMenuItemEndereco1.setText("Cores");
         jMenuItemEndereco1.addActionListener(new java.awt.event.ActionListener() {
@@ -180,7 +180,7 @@ public class MainForm extends javax.swing.JFrame {
         });
         jMenuRegistos.add(jMenuItemEndereco1);
 
-        jMenuItemCaracteristicaProduto.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        jMenuItemCaracteristicaProduto.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_K, java.awt.event.InputEvent.CTRL_DOWN_MASK));
         jMenuItemCaracteristicaProduto.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/caracteristica.png"))); // NOI18N
         jMenuItemCaracteristicaProduto.setText("Caracteristica Prod.");
         jMenuItemCaracteristicaProduto.addActionListener(new java.awt.event.ActionListener() {
