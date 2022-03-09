@@ -37,7 +37,7 @@ public class LoginForm extends javax.swing.JFrame {
                 main.setVisible(true);
                 dispose();
                 VendasForm form = new VendasForm();
-                nome = rs.getString(5);
+                nome = rs.getString(4);
                 idVendedor = rs.getInt("idVendedor");
             } else {
                 JOptionPane.showMessageDialog(null, "Dados Inválidos!!!");
