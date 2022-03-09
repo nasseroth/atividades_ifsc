@@ -16,6 +16,10 @@ public class CaracteristicaProdutoBeans {
     public CaracteristicaProdutoBeans() {
     }
 
+    public CaracteristicaProdutoBeans(int idCaracteristicaProduto) {
+        this.idCaracteristicaProduto = idCaracteristicaProduto;
+    }
+
     public CaracteristicaProdutoBeans(int idCaracteristicaProduto, ProdutoBeans produto, CorBeans cor, String tamanhoProduto, String barraProduto, Double qtdEstoqueProduto) {
         this.idCaracteristicaProduto = idCaracteristicaProduto;
         this.produto = produto;

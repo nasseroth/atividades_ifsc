@@ -17,6 +17,7 @@ import static view.MainForm.jDesktopPane;
  * @author Nasser
  */
 public class VendasController implements ActionListener {
+    
 
     public VendasController(VendasForm vendasForm) {
 
@@ -27,7 +28,7 @@ public class VendasController implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
+        //fazer aqui a captura dos eventos como F1
     }
     
     void centralizarForm(JInternalFrame frame) {

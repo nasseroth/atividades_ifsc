@@ -73,11 +73,11 @@ public class DaoVenda {
 
     public int salvarDetalheVenda(DetalheVendaBeans beans) {
         try {
-            String sql = "insert into detalhesvenda(venda_idVenda, produto_idProduto, "
+            String sql = "insert into detalhesvenda(venda_idVenda, idCaracteristicaProduto, "
                     + "quantidade, valorTotal) values(?,?,?,?)";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setInt(1, beans.getVenda().getIdVenda());
-            ps.setInt(2, beans.getProduto().getIdProduto());
+            ps.setInt(2, beans.getCaracteristicaProduto().getIdCaracteristicaProduto());
             ps.setInt(3, beans.getQuantidade());
             ps.setDouble(4, beans.getValorTotal());
             ps.executeUpdate();

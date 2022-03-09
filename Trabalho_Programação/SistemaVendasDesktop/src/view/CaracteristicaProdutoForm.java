@@ -245,7 +245,6 @@ public class CaracteristicaProdutoForm extends javax.swing.JInternalFrame {
         jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel7.setText("COD.PRODUTO:");
 
-        jTextFieldCodProd.setEditable(false);
         jTextFieldCodProd.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jTextFieldCodProd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -277,7 +276,6 @@ public class CaracteristicaProdutoForm extends javax.swing.JInternalFrame {
         jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel8.setText("COR:");
 
-        jTextFieldCodCor.setEditable(false);
         jTextFieldCodCor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jTextFieldCodCor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -327,7 +325,6 @@ public class CaracteristicaProdutoForm extends javax.swing.JInternalFrame {
         jLabel2.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel2.setText("Tamanho Prod:");
 
-        jTextFieldTamanho.setEditable(false);
         jTextFieldTamanho.setFont(new java.awt.Font("Century Gothic", 3, 16)); // NOI18N
         jTextFieldTamanho.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jTextFieldTamanho.setEnabled(false);
@@ -335,12 +332,10 @@ public class CaracteristicaProdutoForm extends javax.swing.JInternalFrame {
         jLabel3.setFont(new java.awt.Font("Dialog", 1, 14)); // NOI18N
         jLabel3.setText("Cod. Barras:");
 
-        jTextFieldBarras.setEditable(false);
         jTextFieldBarras.setFont(new java.awt.Font("Century Gothic", 3, 16)); // NOI18N
         jTextFieldBarras.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jTextFieldBarras.setEnabled(false);
 
-        jTextFieldEstoque.setEditable(false);
         jTextFieldEstoque.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldEstoque.setFont(new java.awt.Font("Segoe UI", 3, 16)); // NOI18N
         jTextFieldEstoque.setForeground(new java.awt.Color(0, 0, 204));

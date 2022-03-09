@@ -107,7 +107,7 @@ public class DaoCaracteristicaProduto {
 
     public CaracteristicaProdutoBeans consultaCaracteristicaProduto(int cod) {
         try {
-            String sql = "select * from caracteristicaProduto where idCaracteristicaProduto = " + cod;
+            String sql = "select * from caracteristicaProduto where barraProduto = " + cod;
             PreparedStatement ps = connection.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {

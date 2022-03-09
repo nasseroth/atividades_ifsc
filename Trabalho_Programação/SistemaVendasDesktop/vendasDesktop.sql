@@ -127,11 +127,11 @@ estadoProduto varchar(1)
 CREATE TABLE IF NOT EXISTS detalhesVenda(
 idDetalhe int primary key auto_increment,
 venda_idVenda int not null,
-produto_idProduto int not null,
+caracteristicaProduto_idCaracteristicaProduto int not null,
 quantidade int(11) not null,
 valorTotal double not null,
 foreign key(venda_idVenda) references vendas(idVenda) on delete no action on update cascade,
-foreign key(produto_idProduto) references produto(idProduto) on delete no action on update cascade 
+foreign key(caracteristicaProduto_idCaracteristicaProduto) references caracteristicaProduto(idCaracteristicaProduto) on delete no action on update cascade 
 );
 
 select * from detalhesVenda

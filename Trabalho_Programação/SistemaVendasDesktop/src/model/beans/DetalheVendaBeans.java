@@ -8,19 +8,11 @@ public class DetalheVendaBeans {
 
     private int idDetalheVenda;
     private VendaBeans venda;
-    private ProdutoBeans produto;
+    private CaracteristicaProdutoBeans caracteristicaProduto;
     private int quantidade;
     private double valorTotal;
 
     public DetalheVendaBeans() {
-    }
-
-    public DetalheVendaBeans(int idDetalheVenda, VendaBeans venda, ProdutoBeans produto, int quantidade, double valorTotal) {
-        this.idDetalheVenda = idDetalheVenda;
-        this.venda = venda;
-        this.produto = produto;
-        this.quantidade = quantidade;
-        this.valorTotal = valorTotal;
     }
 
     public int getIdDetalheVenda() {
@@ -39,12 +31,12 @@ public class DetalheVendaBeans {
         this.venda = venda;
     }
 
-    public ProdutoBeans getProduto() {
-        return produto;
+    public CaracteristicaProdutoBeans getCaracteristicaProduto() {
+        return caracteristicaProduto;
     }
 
-    public void setProduto(ProdutoBeans produto) {
-        this.produto = produto;
+    public void setCaracteristicaProduto(CaracteristicaProdutoBeans caracteristicaProduto) {
+        this.caracteristicaProduto = caracteristicaProduto;
     }
 
     public int getQuantidade() {
@@ -62,6 +54,7 @@ public class DetalheVendaBeans {
     public void setValorTotal(double valorTotal) {
         this.valorTotal = valorTotal;
     }
+
 
 
 }

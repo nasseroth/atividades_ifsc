@@ -12,11 +12,13 @@ import java.util.ArrayList;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import model.beans.CaracteristicaProdutoBeans;
 import model.beans.ClienteBeans;
 import model.beans.DetalheVendaBeans;
 import model.beans.ProdutoBeans;
 import model.beans.VendaBeans;
 import model.beans.VendedorBeans;
+import model.dao.DaoCaracteristicaProduto;
 import model.dao.DaoCliente;
 import model.dao.DaoProduto;
 import model.dao.DaoVenda;
@@ -31,6 +33,7 @@ public class VendasForm extends javax.swing.JInternalFrame {
     DaoCliente daoCliente = new DaoCliente();
     DaoVendedor daoVendedor = new DaoVendedor();
     DaoProduto daoProduto = new DaoProduto();
+    DaoCaracteristicaProduto daoCaracteristicaProduto = new DaoCaracteristicaProduto();
     DaoVenda daoVenda = new DaoVenda();
     DefaultTableModel model = new DefaultTableModel();
     PagamentoForm form = new PagamentoForm();
@@ -38,6 +41,7 @@ public class VendasForm extends javax.swing.JInternalFrame {
     DecimalFormat b = new DecimalFormat("#,###.00 MZN");
     public ClienteBeans clienteBeans = new ClienteBeans();
     ProdutoBeans beans = new ProdutoBeans();
+    CaracteristicaProdutoBeans caracteristicaProdutoBeans = new CaracteristicaProdutoBeans();
     VendaBeans venda = new VendaBeans();
     VendedorBeans vendedorBeans = new VendedorBeans();
     DetalheVendaBeans detalhe = new DetalheVendaBeans();
@@ -675,7 +679,7 @@ public class VendasForm extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jButtonBuscaClienteActionPerformed
 
     private void jButtonBuscaProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonBuscaProdActionPerformed
-        buscaProduto();
+        buscaProdutoCodBarras();
     }//GEN-LAST:event_jButtonBuscaProdActionPerformed
 
     private void jButtonAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAddActionPerformed
@@ -806,7 +810,7 @@ public class VendasForm extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_jTextFieldCodClienteActionPerformed
 
     private void jTextFieldCodProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldCodProdActionPerformed
-        buscaProduto();
+        buscaProdutoCodBarras();
     }//GEN-LAST:event_jTextFieldCodProdActionPerformed
 
     private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelActionPerformed
@@ -844,6 +848,32 @@ public class VendasForm extends javax.swing.JInternalFrame {
         }
     }
 
+    private void buscaProdutoCodBarras() {
+        if (jTextFieldCodProd.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Preencha o Campo para Buscar o Produto");
+            jTextFieldCodProd.requestFocus();
+        } else {
+            caracteristicaProdutoBeans = daoCaracteristicaProduto.consultaCaracteristicaProduto(Integer.parseInt(jTextFieldCodProd.getText()));
+            if (caracteristicaProdutoBeans != null) {
+                jTextFieldNomeProd.setText(caracteristicaProdutoBeans.getProduto().getNomeProduto());
+                jTextFieldPreco.setText("" + caracteristicaProdutoBeans.getProduto().getPrecoProduto());
+                jTextFieldStock.setText("" + caracteristicaProdutoBeans.getProduto().getQuantProduto());
+            } else {
+                int res = JOptionPane.showConfirmDialog(null, "Cod de Produto nao Existe!"
+                        + "\nDeseja adicionar um novo Produto", "Atencao", JOptionPane.YES_NO_OPTION);
+                jTextFieldCodProd.setText("");
+                jTextFieldCodProd.requestFocus();
+                if (res == JOptionPane.YES_OPTION) {
+                    CaracteristicaProdutoForm form = new CaracteristicaProdutoForm();
+                    MainForm.jDesktopPane.add(form);
+                    form.setVisible(true);
+                    daoCaracteristicaProduto = new DaoCaracteristicaProduto();
+                }
+            }
+        }
+    }
+
+    /*
     private void buscaProduto() {
         if (jTextFieldCodProd.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Preencha o Campo para Buscar o Produto");
@@ -867,7 +897,7 @@ public class VendasForm extends javax.swing.JInternalFrame {
                 }
             }
         }
-    }
+    }*/
 
     private void calculaTotal() {
         totalPagar = 0;
@@ -899,7 +929,7 @@ public class VendasForm extends javax.swing.JInternalFrame {
             int idProd = Integer.parseInt(jTableVenda.getValueAt(i, 1).toString());
             int quant = Integer.parseInt(jTableVenda.getValueAt(i, 3).toString());
             double total = Double.parseDouble(jTableVenda.getValueAt(i, 5).toString());
-            detalhe.setProduto(new ProdutoBeans(idProd));
+            detalhe.setCaracteristicaProduto(new CaracteristicaProdutoBeans(idProd));
             detalhe.setVenda(new VendaBeans(idVendas));
             detalhe.setQuantidade(quant);
             detalhe.setValorTotal(total);
