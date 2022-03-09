@@ -62,7 +62,7 @@ public class DaoProduto {
         return lista;
     }
 
-    public void actualizarProduto(ProdutoBeans beans) {
+    public void atualizarProduto(ProdutoBeans beans) {
         try {
             String sql = "update produto set nomeProduto = ?, precoProduto = ?, stockProduto = ?,"
                     + "estadoProduto = ? where idProduto = ?";

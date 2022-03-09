@@ -615,7 +615,7 @@ public class EnderecoForm extends javax.swing.JInternalFrame {
             beans.setLogradouroCep(jTextFieldLogradouro.getText());
             beans.setBairro(bairroBeans);
             beans.setCidade(cidadeBeans);
-            endereco.actualizarEndereco(beans);
+            endereco.atualizarEndereco(beans);
             limparTabela();
             listar();
             refreshForm();

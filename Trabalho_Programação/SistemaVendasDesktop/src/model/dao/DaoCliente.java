@@ -83,7 +83,7 @@ public class DaoCliente {
     }
 
     //Metodo para a actualizacao de dados
-    public void actualizarCliente(ClienteBeans beans) {
+    public void atualizarCliente(ClienteBeans beans) {
         try {
             String sql = "update cliente set nomeCliente = ?, dtNasCliente = ?, cpfCliente = ?,"
                     + "rgCliente = ?, foneCliente = ?, fone2Cliente = ?, emailCliente = ?, compleEnderecoCliente = ?,"
@@ -106,7 +106,7 @@ public class DaoCliente {
             JOptionPane.showMessageDialog(null, "Dados Editados com Sucesso");
         } catch (SQLException ex) {
             System.out.println(ex);
-            JOptionPane.showMessageDialog(null, "Oops!\nErro ao actualizar cliente!!!");
+            JOptionPane.showMessageDialog(null, "Oops!\nErro ao atualizar cliente!!!");
         }
 
     }

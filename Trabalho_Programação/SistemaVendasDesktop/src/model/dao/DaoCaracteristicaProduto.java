@@ -71,7 +71,7 @@ public class DaoCaracteristicaProduto {
         return lista;
     }
 
-    public void actualizarCaracteristicaProduto(CaracteristicaProdutoBeans beans) {
+    public void atualizarCaracteristicaProduto(CaracteristicaProdutoBeans beans) {
         try {
             String sql = "update caracteristicaProduto set idProduto = ?, idCor = ?, tamanhoProduto = ?, "
                     + " barraProduto = ?, qtdEstoqueProduto = ? where idCaracteristicaProduto = ?";
@@ -81,12 +81,13 @@ public class DaoCaracteristicaProduto {
             ps.setString(3, beans.getTamanhoProduto());
             ps.setString(4, beans.getBarraProduto());
             ps.setDouble(5, beans.getQtdEstoqueProduto());
+            ps.setInt(6, beans.getIdCaracteristicaProduto());
             
-            ps.setInt(2, beans.getIdCaracteristicaProduto());
             ps.execute();
             connection.commit();
             JOptionPane.showMessageDialog(null, "Dados Editados com Sucesso!");
         } catch (SQLException ex) {
+            System.out.println(ex);
             JOptionPane.showMessageDialog(null, "Oops!\nErro ao Editar Dados!");
         }
     }

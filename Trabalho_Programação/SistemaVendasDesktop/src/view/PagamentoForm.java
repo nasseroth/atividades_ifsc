@@ -263,7 +263,7 @@ public class PagamentoForm extends javax.swing.JFrame {
                 pagarVista();
                 form.salvarVenda();
                 form.salvarDetalhes();
-                form.actualizarStock();
+                form.atualizarStock();
                 form.gerarNrSerie();
                 JOptionPane.showMessageDialog(null, "Venda Realizada Com Sucesso");
                 dispose();

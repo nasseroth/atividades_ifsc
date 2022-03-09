@@ -734,7 +734,7 @@ public class VendasForm extends javax.swing.JInternalFrame {
         } else {
             salvarVenda();
             salvarDetalhes();
-            actualizarStock();
+            atualizarStock();
             gerarNrSerie();
             limparTabela();
             JOptionPane.showMessageDialog(null, "Venda Realizada Com Sucesso");
@@ -907,7 +907,7 @@ public class VendasForm extends javax.swing.JInternalFrame {
         }
     }
 
-    public void actualizarStock() {
+    public void atualizarStock() {
         for (int i = 0; i < model.getRowCount(); i++) {
             idProd = Integer.parseInt(jTableVenda.getValueAt(i, 1).toString());
             quant = Integer.parseInt(jTableVenda.getValueAt(i, 3).toString());

@@ -6,14 +6,16 @@ import java.sql.SQLException;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+
 public class ConnectionFactory {
 
     private static final String driver = "com.mysql.jdbc.Driver";
-    private static final String banco = "jdbc:mysql://localhost:3306/loja";
+    private static final String banco = "jdbc:mysql://localhost:3306/mydb";
     private static final String user = "root";
-    private static final String senha = "root";
+    private static final String senha = "rober";
 
     public static Connection getConnection() {
+        MysqlDataSource mySqlDataSource;
         try {
             return DriverManager.getConnection(banco + "?verifyServerCertificate=false"
                     + "&useSSL=false"

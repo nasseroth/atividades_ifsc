@@ -58,7 +58,7 @@ public class DaoBairro {
         return lista;
     }
 
-    public void actualizarBairro(BairroBeans beans) {
+    public void atualizarBairro(BairroBeans beans) {
         try {
             String sql = "update bairro set nomeBairro = ? where idBairro = ?";
             PreparedStatement ps = connection.prepareStatement(sql);

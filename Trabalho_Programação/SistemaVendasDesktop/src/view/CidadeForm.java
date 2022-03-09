@@ -462,7 +462,7 @@ public class CidadeForm extends javax.swing.JInternalFrame {
             beans.setNomeCidade(jTextFieldNome.getText());
             beans.setUfCidade(jTextFieldUfCidade.getText());
             beans.setIdCidade(Integer.parseInt(jTextFieldID.getText()));
-            cidade.actualizarCidade(beans);
+            cidade.atualizarCidade(beans);
             limparTabela();
             listar();
             refreshForm();
@@ -479,7 +479,7 @@ public class CidadeForm extends javax.swing.JInternalFrame {
         beans.setNomeCidade(jTextFieldNome.getText());
         beans.setUfCidade(jTextFieldUfCidade.getText());
         beans.setIdCidade(Integer.parseInt(jTextFieldID.getText()));
-        cidade.actualizarCidade(beans);
+        cidade.atualizarCidade(beans);
         limparTabela();
         listar();
         refreshForm();

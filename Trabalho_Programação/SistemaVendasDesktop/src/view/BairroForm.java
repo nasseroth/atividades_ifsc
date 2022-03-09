@@ -432,7 +432,7 @@ public class BairroForm extends javax.swing.JInternalFrame {
                 Integer.parseInt(jTextFieldID.getText()))) {
             beans.setNomeBairro(jTextFieldNome.getText());
             beans.setIdBairro(Integer.parseInt(jTextFieldID.getText()));
-            bairro.actualizarBairro(beans);
+            bairro.atualizarBairro(beans);
             limparTabela();
             listar();
             refreshForm();
@@ -448,7 +448,7 @@ public class BairroForm extends javax.swing.JInternalFrame {
             Integer.parseInt(jTextFieldID.getText()))) {
         beans.setNomeBairro(jTextFieldNome.getText());
         beans.setIdBairro(Integer.parseInt(jTextFieldID.getText()));
-        bairro.actualizarBairro(beans);
+        bairro.atualizarBairro(beans);
         limparTabela();
         listar();
         refreshForm();

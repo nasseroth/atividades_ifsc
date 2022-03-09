@@ -786,7 +786,7 @@ public class ClienteForm extends javax.swing.JInternalFrame {
             beans.setCompleEnderecoCliente(jTextFieldComplementoEndereco.getText());
             beans.setCep(enderecoBeans);
             beans.setIdCliente(Integer.parseInt(jTextFieldId.getText()));
-            cliente.actualizarCliente(beans);
+            cliente.atualizarCliente(beans);
             limparTabela();
             listar();
             jTextFieldNome.setEnabled(true);

@@ -432,7 +432,7 @@ public class CorForm extends javax.swing.JInternalFrame {
                 Integer.parseInt(jTextFieldID.getText()))) {
             beans.setNomeCor(jTextFieldNome.getText());
             beans.setIdCor(Integer.parseInt(jTextFieldID.getText()));
-            cor.actualizarCor(beans);
+            cor.atualizarCor(beans);
             limparTabela();
             listar();
             refreshForm();
@@ -448,7 +448,7 @@ public class CorForm extends javax.swing.JInternalFrame {
             Integer.parseInt(jTextFieldID.getText()))) {
         beans.setNomeCor(jTextFieldNome.getText());
         beans.setIdCor(Integer.parseInt(jTextFieldID.getText()));
-        cor.actualizarCor(beans);
+        cor.atualizarCor(beans);
         limparTabela();
         listar();
         refreshForm();

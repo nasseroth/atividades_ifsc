@@ -58,7 +58,7 @@ public class DaoCor {
         return lista;
     }
 
-    public void actualizarCor(CorBeans beans) {
+    public void atualizarCor(CorBeans beans) {
         try {
             String sql = "update cor set nomeCor = ? where idCor = ?";
             PreparedStatement ps = connection.prepareStatement(sql);

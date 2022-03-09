@@ -456,7 +456,7 @@ public class ProdutoForm extends javax.swing.JInternalFrame {
                     beans.setQuantProduto(Integer.parseInt(jTextFieldStock.getText()));
                     beans.setEstadoProduto(jComboBoxEstado.getSelectedItem().toString());
                     beans.setIdProduto(Integer.parseInt(jTextFieldID.getText()));
-                    produto.actualizarProduto(beans);
+                    produto.atualizarProduto(beans);
                     limparTabela();
                     listar();
                     refreshForm();
@@ -475,7 +475,7 @@ public class ProdutoForm extends javax.swing.JInternalFrame {
                 beans.setQuantProduto(Integer.parseInt(jTextFieldStock.getText()));
                 beans.setEstadoProduto(jComboBoxEstado.getSelectedItem().toString());
                 beans.setIdProduto(Integer.parseInt(jTextFieldID.getText()));
-                produto.actualizarProduto(beans);
+                produto.atualizarProduto(beans);
                 limparTabela();
                 listar();
                 refreshForm();

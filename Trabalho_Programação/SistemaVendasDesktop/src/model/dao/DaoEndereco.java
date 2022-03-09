@@ -66,7 +66,7 @@ public class DaoEndereco {
         return lista;
     }
 
-    public void actualizarEndereco(EnderecoBeans beans) {
+    public void atualizarEndereco(EnderecoBeans beans) {
         try {
             String sql = "update endereco set cep = ?, logradouroCep = ?, idBairro = ?, idCidade = ? where idCep = ?";
             PreparedStatement ps = connection.prepareStatement(sql);

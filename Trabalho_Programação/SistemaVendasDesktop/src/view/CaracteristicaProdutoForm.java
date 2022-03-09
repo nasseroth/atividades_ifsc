@@ -661,7 +661,7 @@ public class CaracteristicaProdutoForm extends javax.swing.JInternalFrame {
             beans.setTamanhoProduto(jTextFieldTamanho.getText());
             beans.setProduto(produtoBeans);
             beans.setCor(corBeans);
-            caracteristicaProduto.actualizarCaracteristicaProduto(beans);
+            caracteristicaProduto.atualizarCaracteristicaProduto(beans);
             limparTabela();
             listar();
             refreshForm();

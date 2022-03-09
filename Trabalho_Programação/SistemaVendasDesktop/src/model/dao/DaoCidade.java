@@ -60,7 +60,7 @@ public class DaoCidade {
         return lista;
     }
 
-    public void actualizarCidade(CidadeBeans beans) {
+    public void atualizarCidade(CidadeBeans beans) {
         try {
             String sql = "update cidade set nomeCidade = ?, ufCidade = ? where idCidade = ?";
             PreparedStatement ps = connection.prepareStatement(sql);
