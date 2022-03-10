@@ -102,6 +102,8 @@ public class VendasForm extends javax.swing.JInternalFrame {
         jButtonAdd = new javax.swing.JButton();
         jLabel14 = new javax.swing.JLabel();
         jTextFieldVendedor = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        jTextFieldCodBarras = new javax.swing.JTextField();
         jPanel4 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -129,11 +131,8 @@ public class VendasForm extends javax.swing.JInternalFrame {
         jPanel3.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("COD.CLIENTE:");
 
-        jTextFieldCodCliente.setBackground(new java.awt.Color(255, 255, 255));
-        jTextFieldCodCliente.setForeground(new java.awt.Color(0, 0, 0));
         jTextFieldCodCliente.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jTextFieldCodCliente.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -143,7 +142,6 @@ public class VendasForm extends javax.swing.JInternalFrame {
 
         jButtonBuscaCliente.setBackground(new java.awt.Color(0, 102, 153));
         jButtonBuscaCliente.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButtonBuscaCliente.setForeground(new java.awt.Color(0, 0, 0));
         jButtonBuscaCliente.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/search1.png"))); // NOI18N
         jButtonBuscaCliente.setText("Buscar");
         jButtonBuscaCliente.setBorderPainted(false);
@@ -164,11 +162,8 @@ public class VendasForm extends javax.swing.JInternalFrame {
         });
 
         jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("COD.PRODUTO:");
 
-        jTextFieldCodProd.setBackground(new java.awt.Color(255, 255, 255));
-        jTextFieldCodProd.setForeground(new java.awt.Color(0, 0, 0));
         jTextFieldCodProd.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
         jTextFieldCodProd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -178,7 +173,6 @@ public class VendasForm extends javax.swing.JInternalFrame {
 
         jButtonBuscaProd.setBackground(new java.awt.Color(153, 255, 153));
         jButtonBuscaProd.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButtonBuscaProd.setForeground(new java.awt.Color(0, 0, 0));
         jButtonBuscaProd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/search.png"))); // NOI18N
         jButtonBuscaProd.setText("Buscar");
         jButtonBuscaProd.setBorderPainted(false);
@@ -199,7 +193,6 @@ public class VendasForm extends javax.swing.JInternalFrame {
         });
 
         jLabel8.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("CLIENTE:");
 
         jTextFieldNomeCliente.setEditable(false);
@@ -209,7 +202,6 @@ public class VendasForm extends javax.swing.JInternalFrame {
         jTextFieldNomeCliente.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         jLabel9.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("PRODUTO:");
 
         jTextFieldNomeProd.setEditable(false);
@@ -219,13 +211,11 @@ public class VendasForm extends javax.swing.JInternalFrame {
         jTextFieldNomeProd.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         jLabel10.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("QUANTIDADE:");
 
         jSpinnerQuant.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         jLabel11.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("STOCK:");
 
         jTextFieldStock.setEditable(false);
@@ -235,7 +225,6 @@ public class VendasForm extends javax.swing.JInternalFrame {
         jTextFieldStock.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         jLabel12.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("DATA DE HOJE");
 
         jTextFieldData.setEditable(false);
@@ -245,7 +234,6 @@ public class VendasForm extends javax.swing.JInternalFrame {
         jTextFieldData.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         jLabel13.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("PRECO:");
 
         jTextFieldPreco.setEditable(false);
@@ -256,7 +244,6 @@ public class VendasForm extends javax.swing.JInternalFrame {
 
         jButtonAdd.setBackground(new java.awt.Color(0, 153, 153));
         jButtonAdd.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButtonAdd.setForeground(new java.awt.Color(0, 0, 0));
         jButtonAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/add-button1.png"))); // NOI18N
         jButtonAdd.setText("Adicionar a lista ");
         jButtonAdd.setBorderPainted(false);
@@ -277,7 +264,6 @@ public class VendasForm extends javax.swing.JInternalFrame {
         });
 
         jLabel14.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("VENDEDOR:");
 
         jTextFieldVendedor.setEditable(false);
@@ -285,6 +271,15 @@ public class VendasForm extends javax.swing.JInternalFrame {
         jTextFieldVendedor.setFont(new java.awt.Font("Segoe UI", 3, 17)); // NOI18N
         jTextFieldVendedor.setForeground(new java.awt.Color(0, 0, 204));
         jTextFieldVendedor.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+
+        jLabel16.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel16.setText("COD. BARRAS:");
+
+        jTextFieldCodBarras.setEditable(false);
+        jTextFieldCodBarras.setBackground(new java.awt.Color(255, 255, 255));
+        jTextFieldCodBarras.setFont(new java.awt.Font("Segoe UI", 3, 16)); // NOI18N
+        jTextFieldCodBarras.setForeground(new java.awt.Color(0, 0, 204));
+        jTextFieldCodBarras.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -326,22 +321,29 @@ public class VendasForm extends javax.swing.JInternalFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButtonBuscaProd, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel10)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jSpinnerQuant, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextFieldStock)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextFieldData, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(jLabel12)))
-                .addContainerGap(12, Short.MAX_VALUE))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jLabel10)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jSpinnerQuant, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addComponent(jLabel11)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextFieldStock)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextFieldData, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addComponent(jLabel12)))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel16)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextFieldCodBarras)
+                        .addGap(25, 25, 25))))
         );
 
         jPanel3Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jTextFieldCodCliente, jTextFieldCodProd});
@@ -377,12 +379,16 @@ public class VendasForm extends javax.swing.JInternalFrame {
                             .addComponent(jLabel8)
                             .addComponent(jTextFieldNomeCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel13)
-                    .addComponent(jTextFieldPreco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonAdd)
-                    .addComponent(jLabel14)
-                    .addComponent(jTextFieldVendedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel16)
+                        .addComponent(jTextFieldCodBarras, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel13)
+                        .addComponent(jTextFieldPreco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jButtonAdd)
+                        .addComponent(jLabel14)
+                        .addComponent(jTextFieldVendedor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(27, Short.MAX_VALUE))
         );
 
@@ -397,25 +403,20 @@ public class VendasForm extends javax.swing.JInternalFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 30)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Super Mercado Líder");
 
         jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Venda de Diversos Produtos");
 
         jLabel3.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Maputo, Matola");
 
         jLabel4.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Nro. Serie");
 
         jTextFieldNrSerie.setEditable(false);
         jTextFieldNrSerie.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldNrSerie.setFont(new java.awt.Font("Segoe UI Black", 0, 24)); // NOI18N
-        jTextFieldNrSerie.setForeground(new java.awt.Color(0, 0, 0));
         jTextFieldNrSerie.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         jTextFieldNrSerie.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
 
@@ -457,7 +458,7 @@ public class VendasForm extends javax.swing.JInternalFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextFieldNrSerie, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(8, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jLabel5)
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -483,17 +484,16 @@ public class VendasForm extends javax.swing.JInternalFrame {
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Lista de Produtos", javax.swing.border.TitledBorder.LEFT, javax.swing.border.TitledBorder.TOP, new java.awt.Font("Segoe UI", 2, 12), new java.awt.Color(51, 51, 255))); // NOI18N
 
-        jTableVenda.setBackground(new java.awt.Color(255, 255, 255));
         jTableVenda.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Nro.", "Cod Prod", "Nome do Produto", "Quantidade", "Preco Unitario", "Total"
+                "Nro.", "Cod Prod", "Cod Barras", "Nome do Produto", "Quantidade", "Preco Unitario", "Total"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -504,7 +504,6 @@ public class VendasForm extends javax.swing.JInternalFrame {
         jTableVenda.setIntercellSpacing(new java.awt.Dimension(0, 0));
         jTableVenda.setRowHeight(20);
         jTableVenda.setSelectionBackground(new java.awt.Color(255, 51, 51));
-        jTableVenda.setSelectionForeground(new java.awt.Color(255, 255, 255));
         jScrollPane1.setViewportView(jTableVenda);
         if (jTableVenda.getColumnModel().getColumnCount() > 0) {
             jTableVenda.getColumnModel().getColumn(0).setResizable(false);
@@ -512,13 +511,14 @@ public class VendasForm extends javax.swing.JInternalFrame {
             jTableVenda.getColumnModel().getColumn(1).setResizable(false);
             jTableVenda.getColumnModel().getColumn(1).setPreferredWidth(15);
             jTableVenda.getColumnModel().getColumn(2).setResizable(false);
-            jTableVenda.getColumnModel().getColumn(2).setPreferredWidth(350);
             jTableVenda.getColumnModel().getColumn(3).setResizable(false);
-            jTableVenda.getColumnModel().getColumn(3).setPreferredWidth(60);
+            jTableVenda.getColumnModel().getColumn(3).setPreferredWidth(350);
             jTableVenda.getColumnModel().getColumn(4).setResizable(false);
             jTableVenda.getColumnModel().getColumn(4).setPreferredWidth(60);
             jTableVenda.getColumnModel().getColumn(5).setResizable(false);
             jTableVenda.getColumnModel().getColumn(5).setPreferredWidth(60);
+            jTableVenda.getColumnModel().getColumn(6).setResizable(false);
+            jTableVenda.getColumnModel().getColumn(6).setPreferredWidth(60);
         }
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -542,7 +542,6 @@ public class VendasForm extends javax.swing.JInternalFrame {
 
         jButtonCancel.setBackground(new java.awt.Color(255, 51, 51));
         jButtonCancel.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButtonCancel.setForeground(new java.awt.Color(0, 0, 0));
         jButtonCancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cancel.png"))); // NOI18N
         jButtonCancel.setText("Cancelar");
         jButtonCancel.setBorderPainted(false);
@@ -564,7 +563,6 @@ public class VendasForm extends javax.swing.JInternalFrame {
 
         jButtonVender.setBackground(new java.awt.Color(241, 116, 33));
         jButtonVender.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButtonVender.setForeground(new java.awt.Color(0, 0, 0));
         jButtonVender.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cheque.png"))); // NOI18N
         jButtonVender.setText("Realizar Venda");
         jButtonVender.setBorderPainted(false);
@@ -585,14 +583,12 @@ public class VendasForm extends javax.swing.JInternalFrame {
         });
 
         jLabel15.setFont(new java.awt.Font("Century Gothic", 1, 16)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/dollar.png"))); // NOI18N
         jLabel15.setText("Valor a Pagar:");
 
         jTextFieldTotal.setEditable(false);
         jTextFieldTotal.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldTotal.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jTextFieldTotal.setForeground(new java.awt.Color(0, 0, 0));
         jTextFieldTotal.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jTextFieldTotal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -638,7 +634,7 @@ public class VendasForm extends javax.swing.JInternalFrame {
                     .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -694,29 +690,33 @@ public class VendasForm extends javax.swing.JInternalFrame {
             model = (DefaultTableModel) jTableVenda.getModel();
             cont++;
             idProd = beans.getIdProduto();
+            String codBarrasProd = jTextFieldCodBarras.getText();
             String nomeProd = jTextFieldNomeProd.getText();
             precoProd = Double.parseDouble(jTextFieldPreco.getText());
             quant = Integer.parseInt(jSpinnerQuant.getValue().toString());
-            int stock = Integer.parseInt(jTextFieldStock.getText());
+            Double stock = Double.parseDouble(jTextFieldStock.getText());
             total = quant * precoProd;
             ArrayList lista = new ArrayList();
             if (stock > 0) {
                 lista.add(cont);
                 lista.add(idProd);
+                lista.add(codBarrasProd);
                 lista.add(nomeProd);
                 lista.add(quant);
                 lista.add(precoProd);
                 lista.add(total);
-                Object[] objects = new Object[6];
+                Object[] objects = new Object[7];
                 objects[0] = lista.get(0);
                 objects[1] = lista.get(1);
                 objects[2] = lista.get(2);
                 objects[3] = lista.get(3);
                 objects[4] = lista.get(4);
                 objects[5] = lista.get(5);
+                objects[6] = lista.get(6);
                 model.addRow(objects);
                 jTableVenda.setModel(model);
                 calculaTotal();
+                jTextFieldCodBarras.setText("");
                 jTextFieldNomeProd.setText("");
                 jTextFieldStock.setText("");
                 jTextFieldPreco.setText("");
@@ -742,6 +742,7 @@ public class VendasForm extends javax.swing.JInternalFrame {
             gerarNrSerie();
             limparTabela();
             JOptionPane.showMessageDialog(null, "Venda Realizada Com Sucesso");
+            jTextFieldCodBarras.setText("");
             jTextFieldNomeProd.setText("");
             jTextFieldStock.setText("");
             jTextFieldPreco.setText("");
@@ -815,6 +816,7 @@ public class VendasForm extends javax.swing.JInternalFrame {
 
     private void jButtonCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCancelActionPerformed
         limparTabela();
+        jTextFieldCodBarras.setText("");
         jTextFieldNomeProd.setText("");
         jTextFieldStock.setText("");
         jTextFieldPreco.setText("");
@@ -853,11 +855,16 @@ public class VendasForm extends javax.swing.JInternalFrame {
             JOptionPane.showMessageDialog(null, "Preencha o Campo para Buscar o Produto");
             jTextFieldCodProd.requestFocus();
         } else {
-            caracteristicaProdutoBeans = daoCaracteristicaProduto.consultaCaracteristicaProduto(Integer.parseInt(jTextFieldCodProd.getText()));
+            caracteristicaProdutoBeans = daoCaracteristicaProduto.consultaCaracteristicaProduto(jTextFieldCodProd.getText());
             if (caracteristicaProdutoBeans != null) {
+                beans = daoProduto.consultaProduto(caracteristicaProdutoBeans.getProduto().getIdProduto());
+                caracteristicaProdutoBeans.setProduto(beans);
+                jTextFieldCodBarras.setText(caracteristicaProdutoBeans.getBarraProduto());
                 jTextFieldNomeProd.setText(caracteristicaProdutoBeans.getProduto().getNomeProduto());
+                jTextFieldCodProd.setText(String.valueOf(caracteristicaProdutoBeans.getProduto().getIdProduto()));
                 jTextFieldPreco.setText("" + caracteristicaProdutoBeans.getProduto().getPrecoProduto());
-                jTextFieldStock.setText("" + caracteristicaProdutoBeans.getProduto().getQuantProduto());
+                
+                jTextFieldStock.setText("" + caracteristicaProdutoBeans.getQtdEstoqueProduto());
             } else {
                 int res = JOptionPane.showConfirmDialog(null, "Cod de Produto nao Existe!"
                         + "\nDeseja adicionar um novo Produto", "Atencao", JOptionPane.YES_NO_OPTION);
@@ -902,8 +909,8 @@ public class VendasForm extends javax.swing.JInternalFrame {
     private void calculaTotal() {
         totalPagar = 0;
         for (int i = 0; i < jTableVenda.getRowCount(); i++) {
-            quant = Integer.parseInt(jTableVenda.getValueAt(i, 3).toString());
-            precoProd = Double.parseDouble(jTableVenda.getValueAt(i, 4).toString());
+            quant = Integer.parseInt(jTableVenda.getValueAt(i, 4).toString());
+            precoProd = Double.parseDouble(jTableVenda.getValueAt(i, 5).toString());
             totalPagar = (double) totalPagar + (quant * precoProd);
         }
         jTextFieldTotal.setText(b.format(totalPagar));
@@ -926,10 +933,18 @@ public class VendasForm extends javax.swing.JInternalFrame {
         String idVenda = daoVenda.idVendas();
         int idVendas = Integer.parseInt(idVenda);
         for (int i = 0; i < jTableVenda.getRowCount(); i++) {
-            int idProd = Integer.parseInt(jTableVenda.getValueAt(i, 1).toString());
-            int quant = Integer.parseInt(jTableVenda.getValueAt(i, 3).toString());
-            double total = Double.parseDouble(jTableVenda.getValueAt(i, 5).toString());
-            detalhe.setCaracteristicaProduto(new CaracteristicaProdutoBeans(idProd));
+            String codBarrasProd = jTableVenda.getValueAt(i, 2).toString();
+            System.out.println("0: " + jTableVenda.getValueAt(i, 0).toString());
+            System.out.println("1: " + codBarrasProd);
+            System.out.println("3: " + jTableVenda.getValueAt(i, 2).toString());
+            System.out.println("3: " + jTableVenda.getValueAt(i, 3).toString());
+            System.out.println("4: " + jTableVenda.getValueAt(i, 4).toString());
+            System.out.println("5: " + jTableVenda.getValueAt(i, 5).toString());
+            
+            System.out.println("Cod barras: " + codBarrasProd);
+            int quant = Integer.parseInt(jTableVenda.getValueAt(i, 4).toString());
+            double total = Double.parseDouble(jTableVenda.getValueAt(i, 6).toString());
+            detalhe.setCaracteristicaProduto(daoCaracteristicaProduto.consultaCaracteristicaProduto(codBarrasProd));
             detalhe.setVenda(new VendaBeans(idVendas));
             detalhe.setQuantidade(quant);
             detalhe.setValorTotal(total);
@@ -939,11 +954,12 @@ public class VendasForm extends javax.swing.JInternalFrame {
 
     public void atualizarStock() {
         for (int i = 0; i < model.getRowCount(); i++) {
-            idProd = Integer.parseInt(jTableVenda.getValueAt(i, 1).toString());
-            quant = Integer.parseInt(jTableVenda.getValueAt(i, 3).toString());
-            beans = daoProduto.consultaProduto(idProd);
-            int stockActual = beans.getQuantProduto() - quant;
-            daoProduto.actulizaStock(stockActual, idProd);
+            String codBarras = jTableVenda.getValueAt(i, 2).toString();
+            quant = Integer.parseInt(jTableVenda.getValueAt(i, 4).toString());
+            daoCaracteristicaProduto = new DaoCaracteristicaProduto();
+            caracteristicaProdutoBeans = daoCaracteristicaProduto.consultaCaracteristicaProduto(codBarras);
+            Double stockActual = caracteristicaProdutoBeans.getQtdEstoqueProduto() - quant;
+            daoCaracteristicaProduto.atualizarEstoque(stockActual, codBarras);
         }
     }
 
@@ -978,6 +994,7 @@ public class VendasForm extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -995,6 +1012,7 @@ public class VendasForm extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSpinner jSpinnerQuant;
     private javax.swing.JTable jTableVenda;
+    public static javax.swing.JTextField jTextFieldCodBarras;
     public static javax.swing.JTextField jTextFieldCodCliente;
     public static javax.swing.JTextField jTextFieldCodProd;
     private javax.swing.JTextField jTextFieldData;

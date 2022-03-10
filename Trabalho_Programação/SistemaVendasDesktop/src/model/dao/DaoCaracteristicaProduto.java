@@ -36,7 +36,7 @@ public class DaoCaracteristicaProduto {
             ps.setString(3, beans.getTamanhoProduto());
             ps.setString(4, beans.getBarraProduto());
             ps.setDouble(5, beans.getQtdEstoqueProduto());
-            
+
             ps.execute();
             connection.setAutoCommit(false);
             connection.commit();
@@ -61,7 +61,7 @@ public class DaoCaracteristicaProduto {
                 beans.setTamanhoProduto(rs.getString("tamanhoProduto"));
                 beans.setBarraProduto(rs.getString("barraProduto"));
                 beans.setQtdEstoqueProduto(rs.getDouble("qtdEstoqueProduto"));
-                
+
                 lista.add(beans);
             }
         } catch (SQLException ex) {
@@ -82,7 +82,7 @@ public class DaoCaracteristicaProduto {
             ps.setString(4, beans.getBarraProduto());
             ps.setDouble(5, beans.getQtdEstoqueProduto());
             ps.setInt(6, beans.getIdCaracteristicaProduto());
-            
+
             ps.execute();
             connection.commit();
             JOptionPane.showMessageDialog(null, "Dados Editados com Sucesso!");
@@ -101,11 +101,11 @@ public class DaoCaracteristicaProduto {
             connection.commit();
             JOptionPane.showMessageDialog(null, "Dados Excluidos com Sucesso!!");
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Oops!\nErro ao Excluir Dados!\n"+ex.getMessage());
+            JOptionPane.showMessageDialog(null, "Oops!\nErro ao Excluir Dados!\n" + ex.getMessage());
         }
     }
 
-    public CaracteristicaProdutoBeans consultaCaracteristicaProduto(int cod) {
+    public CaracteristicaProdutoBeans consultaCaracteristicaProduto(String cod) {
         try {
             String sql = "select * from caracteristicaProduto where barraProduto = " + cod;
             PreparedStatement ps = connection.prepareStatement(sql);
@@ -125,5 +125,20 @@ public class DaoCaracteristicaProduto {
             JOptionPane.showMessageDialog(null, "Erro ao buscar CaracteristicaProduto!");
         }
         return null;
+    }
+
+    public int atualizarEstoque(Double stockActual, String codBarras) {
+        try {
+            System.out.println("stockActual: " + stockActual);
+            System.out.println("codBarras: " + codBarras);
+            String sql = "update caracteristicaProduto set qtdEstoqueProduto = " + stockActual + " where barraProduto = " + codBarras;
+            PreparedStatement ps = connection.prepareStatement(sql);
+            resposta = ps.executeUpdate();
+            connection.commit();
+        } catch (SQLException e) {
+            System.out.println(e);
+            JOptionPane.showMessageDialog(null, "Erro ao atualizar Estoque");
+        }
+        return resposta;
     }
 }

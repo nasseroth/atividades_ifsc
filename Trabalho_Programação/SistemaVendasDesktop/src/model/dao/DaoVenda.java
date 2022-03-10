@@ -65,6 +65,7 @@ public class DaoVenda {
             resposta = ps.executeUpdate();
             connection.commit();
         } catch (SQLException ex) {
+            System.out.println(ex);
             JOptionPane.showMessageDialog(null, "Erro ao Realizar Venda!\n" + ex.getMessage());
             ex.printStackTrace();
         }
@@ -73,7 +74,7 @@ public class DaoVenda {
 
     public int salvarDetalheVenda(DetalheVendaBeans beans) {
         try {
-            String sql = "insert into detalhesvenda(venda_idVenda, idCaracteristicaProduto, "
+            String sql = "insert into detalhesvenda(venda_idVenda, caracteristicaProduto_idCaracteristicaProduto, "
                     + "quantidade, valorTotal) values(?,?,?,?)";
             PreparedStatement ps = connection.prepareStatement(sql);
             ps.setInt(1, beans.getVenda().getIdVenda());
@@ -83,6 +84,7 @@ public class DaoVenda {
             ps.executeUpdate();
             connection.commit();
         } catch (SQLException ex) {
+            System.out.println(ex);
             JOptionPane.showMessageDialog(null, "Erro ao Realizar Venda!!!\n" + ex.getMessage());
         }
         return resposta;
