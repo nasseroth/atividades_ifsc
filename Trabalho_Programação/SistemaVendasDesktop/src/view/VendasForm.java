@@ -1,15 +1,17 @@
 package view;
 
-import connection.SingleConnection;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Font;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
+import java.awt.KeyEventDispatcher;
+import java.awt.KeyboardFocusManager;
+import java.awt.event.KeyEvent;
 import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import javax.swing.JInternalFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.beans.CaracteristicaProdutoBeans;
@@ -23,6 +25,7 @@ import model.dao.DaoCliente;
 import model.dao.DaoProduto;
 import model.dao.DaoVenda;
 import model.dao.DaoVendedor;
+import static view.MainForm.jDesktopPane;
 
 /**
  *
@@ -36,9 +39,8 @@ public class VendasForm extends javax.swing.JInternalFrame {
     DaoCaracteristicaProduto daoCaracteristicaProduto = new DaoCaracteristicaProduto();
     DaoVenda daoVenda = new DaoVenda();
     DefaultTableModel model = new DefaultTableModel();
-    PagamentoForm form = new PagamentoForm();
 
-    DecimalFormat b = new DecimalFormat("#,###.00 MZN");
+    DecimalFormat b = new DecimalFormat("#,###.00 BRL");
     public ClienteBeans clienteBeans = new ClienteBeans();
     ProdutoBeans beans = new ProdutoBeans();
     CaracteristicaProdutoBeans caracteristicaProdutoBeans = new CaracteristicaProdutoBeans();
@@ -58,6 +60,22 @@ public class VendasForm extends javax.swing.JInternalFrame {
         data();
         tabela();
         jTextFieldVendedor.setText(LoginForm.nome);
+        
+        
+        /*
+        KeyboardFocusManager.getCurrentKeyboardFocusManager()
+                .addKeyEventDispatcher(new KeyEventDispatcher() {
+                    @Override
+                    public boolean dispatchKeyEvent(KeyEvent e) {
+                        if (e.getID() == e.KEY_RELEASED && e.getKeyCode() == KeyEvent.VK_F1) {
+
+                            System.out.println(e);
+                            buscaProdutoCodBarras();
+                            dispose();
+                        }
+                        return false;
+                    }
+                });*/
     }
 
     private void data() {
@@ -533,7 +551,7 @@ public class VendasForm extends javax.swing.JInternalFrame {
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -628,12 +646,16 @@ public class VendasForm extends javax.swing.JInternalFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(jPanel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -684,6 +706,9 @@ public class VendasForm extends javax.swing.JInternalFrame {
             jTextFieldCodCliente.requestFocus();
         } else if (jTextFieldCodProd.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Insira um Produto!");
+            jTextFieldCodProd.requestFocus();
+        } else if(Integer.parseInt(jSpinnerQuant.getValue().toString()) > Double.parseDouble(jTextFieldStock.getText())) {
+            JOptionPane.showMessageDialog(null, "O produto não tem esse estoque! Estoque Atual: " + Double.parseDouble(jTextFieldStock.getText()));
             jTextFieldCodProd.requestFocus();
         } else {
             double total;
@@ -736,12 +761,15 @@ public class VendasForm extends javax.swing.JInternalFrame {
         if (jTextFieldTotal.getText().isEmpty()) {
             JOptionPane.showMessageDialog(null, "Adicione Produtos a Lista!!!");
         } else {
+            //chamarPagamentoForm(); // desativado formas de pagamento
+
             salvarVenda();
             salvarDetalhes();
             atualizarStock();
             gerarNrSerie();
             limparTabela();
             JOptionPane.showMessageDialog(null, "Venda Realizada Com Sucesso");
+
             jTextFieldCodBarras.setText("");
             jTextFieldNomeProd.setText("");
             jTextFieldStock.setText("");
@@ -863,7 +891,7 @@ public class VendasForm extends javax.swing.JInternalFrame {
                 jTextFieldNomeProd.setText(caracteristicaProdutoBeans.getProduto().getNomeProduto());
                 jTextFieldCodProd.setText(String.valueOf(caracteristicaProdutoBeans.getProduto().getIdProduto()));
                 jTextFieldPreco.setText("" + caracteristicaProdutoBeans.getProduto().getPrecoProduto());
-                
+
                 jTextFieldStock.setText("" + caracteristicaProdutoBeans.getQtdEstoqueProduto());
             } else {
                 int res = JOptionPane.showConfirmDialog(null, "Cod de Produto nao Existe!"
@@ -905,7 +933,6 @@ public class VendasForm extends javax.swing.JInternalFrame {
             }
         }
     }*/
-
     private void calculaTotal() {
         totalPagar = 0;
         for (int i = 0; i < jTableVenda.getRowCount(); i++) {
@@ -940,7 +967,7 @@ public class VendasForm extends javax.swing.JInternalFrame {
             System.out.println("3: " + jTableVenda.getValueAt(i, 3).toString());
             System.out.println("4: " + jTableVenda.getValueAt(i, 4).toString());
             System.out.println("5: " + jTableVenda.getValueAt(i, 5).toString());
-            
+
             System.out.println("Cod barras: " + codBarrasProd);
             int quant = Integer.parseInt(jTableVenda.getValueAt(i, 4).toString());
             double total = Double.parseDouble(jTableVenda.getValueAt(i, 6).toString());
@@ -1010,7 +1037,7 @@ public class VendasForm extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JSpinner jSpinnerQuant;
+    public javax.swing.JSpinner jSpinnerQuant;
     private javax.swing.JTable jTableVenda;
     public static javax.swing.JTextField jTextFieldCodBarras;
     public static javax.swing.JTextField jTextFieldCodCliente;
@@ -1019,9 +1046,26 @@ public class VendasForm extends javax.swing.JInternalFrame {
     public static javax.swing.JTextField jTextFieldNomeCliente;
     public static javax.swing.JTextField jTextFieldNomeProd;
     public static javax.swing.JTextField jTextFieldNrSerie;
-    private javax.swing.JTextField jTextFieldPreco;
+    public javax.swing.JTextField jTextFieldPreco;
     public static javax.swing.JTextField jTextFieldStock;
-    private javax.swing.JTextField jTextFieldTotal;
+    public javax.swing.JTextField jTextFieldTotal;
     public static javax.swing.JTextField jTextFieldVendedor;
     // End of variables declaration//GEN-END:variables
+
+    private void centralizarForm(JInternalFrame frame) {
+        jDesktopPane.add(frame);
+        Dimension dimension = jDesktopPane.getSize();
+        Dimension dimensionFrame = frame.getSize();
+        frame.setLocation((dimension.width - dimensionFrame.width) / 2,
+                (dimension.height - dimensionFrame.height) / 2);
+        frame.show();
+    }
+    /*
+    private void chamarPagamentoForm() {
+        PagamentoForm pagamentoForm = new PagamentoForm(this);
+        //pagamentoForm.vendasForm = this;
+        pagamentoForm.setVisible(true);
+
+    }
+     */
 }

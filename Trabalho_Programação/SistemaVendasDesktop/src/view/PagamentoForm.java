@@ -10,13 +10,19 @@ import static view.VendasForm.totalPagar;
  */
 public class PagamentoForm extends javax.swing.JFrame {
 
-    DecimalFormat b = new DecimalFormat("#,###.00 MZN");
+    DecimalFormat b = new DecimalFormat("#,###.00 BRL");
     private double money;
     private double pagarTotal;
+    public VendasForm vendasForm;
+/*
+    public PagamentoForm(VendasForm vendasForm) {
+        this.vendasForm = vendasForm;
+    }    */
 
     public PagamentoForm() {
         initComponents();
         jTextFieldPagar.setText(b.format(VendasForm.totalPagar));
+        //System.out.println("Total: " + vendasForm.jTextFieldTotal);
     }
 
     @SuppressWarnings("unchecked")
@@ -256,15 +262,25 @@ public class PagamentoForm extends javax.swing.JFrame {
 
     private void jButtonFimPagActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonFimPagActionPerformed
         if (jCheckBoxVista.isSelected()) {
-            if (jTextFieldVista.getText() == null) {
+            if (jTextFieldVista.getText() == null || jTextFieldVista.getText().isEmpty()) {
                 JOptionPane.showMessageDialog(null, "Insira o Valor Primeiro!!!");
             } else {
-                VendasForm form = new VendasForm();
                 pagarVista();
-                form.salvarVenda();
-                form.salvarDetalhes();
-                form.atualizarStock();
-                form.gerarNrSerie();
+                vendasForm.salvarVenda();
+                vendasForm.salvarDetalhes();
+                vendasForm.atualizarStock();
+                vendasForm.gerarNrSerie();
+                vendasForm.limparTabela();
+                vendasForm.jTextFieldCodBarras.setText("");
+                vendasForm.jTextFieldNomeProd.setText("");
+                vendasForm.jTextFieldStock.setText("");
+                vendasForm.jTextFieldPreco.setText("");
+                vendasForm.jTextFieldCodProd.setText("");
+                vendasForm.jTextFieldCodCliente.setText("");
+                vendasForm.jTextFieldNomeCliente.setText("");
+                vendasForm.jTextFieldTotal.setText("");
+                vendasForm.jSpinnerQuant.setValue(1);
+
                 JOptionPane.showMessageDialog(null, "Venda Realizada Com Sucesso");
                 dispose();
             }
