@@ -20,7 +20,6 @@ public class InfoForm extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -51,13 +50,9 @@ public class InfoForm extends javax.swing.JFrame {
         getContentPane().add(jLabel2);
         jLabel2.setBounds(20, 70, 290, 23);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/gpl.png"))); // NOI18N
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(410, 0, 180, 250);
-
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/fundoBrancoPainel.png"))); // NOI18N
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(1, -4, 590, 270);
+        jLabel4.setBounds(1, -4, 590, 130);
 
         setSize(new java.awt.Dimension(606, 165));
         setLocationRelativeTo(null);
@@ -68,7 +63,6 @@ public class InfoForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
