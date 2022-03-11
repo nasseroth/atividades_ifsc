@@ -710,6 +710,9 @@ public class VendasForm extends javax.swing.JInternalFrame {
         } else if(Integer.parseInt(jSpinnerQuant.getValue().toString()) > Double.parseDouble(jTextFieldStock.getText())) {
             JOptionPane.showMessageDialog(null, "O produto não tem esse estoque! Estoque Atual: " + Double.parseDouble(jTextFieldStock.getText()));
             jTextFieldCodProd.requestFocus();
+        } else if(Integer.parseInt(jSpinnerQuant.getValue().toString()) <= 0) {
+            JOptionPane.showMessageDialog(null, "Informe uma quantidade.");
+            jSpinnerQuant.requestFocus();
         } else {
             double total;
             model = (DefaultTableModel) jTableVenda.getModel();
@@ -745,7 +748,7 @@ public class VendasForm extends javax.swing.JInternalFrame {
                 jTextFieldNomeProd.setText("");
                 jTextFieldStock.setText("");
                 jTextFieldPreco.setText("");
-                jSpinnerQuant.setValue(1);
+                jSpinnerQuant.setValue(0);
                 jTextFieldCodProd.setText("");
                 jTextFieldCodProd.requestFocus();
             } else {
@@ -778,7 +781,7 @@ public class VendasForm extends javax.swing.JInternalFrame {
             jTextFieldCodCliente.setText("");
             jTextFieldNomeCliente.setText("");
             jTextFieldTotal.setText("");
-            jSpinnerQuant.setValue(1);
+            jSpinnerQuant.setValue(0);
         }
 
     }//GEN-LAST:event_jButtonVenderActionPerformed
@@ -852,7 +855,7 @@ public class VendasForm extends javax.swing.JInternalFrame {
         jTextFieldCodCliente.setText("");
         jTextFieldNomeCliente.setText("");
         jTextFieldTotal.setText("");
-        jSpinnerQuant.setValue(1);
+        jSpinnerQuant.setValue(0);
     }//GEN-LAST:event_jButtonCancelActionPerformed
 
     private void buscaCliente() {
